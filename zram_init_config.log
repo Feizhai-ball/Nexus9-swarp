@@ -1,0 +1,63 @@
+/init.flounder.rc-7-on init
+/init.flounder.rc-8-    # Load persistent dm-verity state
+/init.flounder.rc-9-    #verity_load_state
+/init.flounder.rc-10-
+/init.flounder.rc-11-    start watchdogd
+/init.flounder.rc-12-
+/init.flounder.rc-13-    symlink /sdcard /storage/sdcard0
+/init.flounder.rc-14-
+/init.flounder.rc:15:    write /sys/block/zram0/comp_algorithm lz4
+/init.flounder.rc:16:    write /sys/block/zram0/max_comp_streams 2
+/init.flounder.rc-17-
+/init.flounder.rc-18-    # Swap in only 1 page at a time
+/init.flounder.rc-19-    write /proc/sys/vm/page-cluster 0
+/init.flounder.rc-20-
+/init.flounder.rc-21-on post-fs
+/init.flounder.rc-22-    # turn off nvmap page pool b/29389829
+/init.flounder.rc-23-    write /sys/module/nvmap_pp/parameters/pool_size 0
+/init.flounder.rc-24-    write /sys/module/nvmap_pp/parameters/enable_page_pools 0
+/init.flounder.rc-25-
+/init.flounder.rc-26-    write /sys/power/gpu_power_on 1
+/init.flounder.rc-27-    write /sys/module/input_cfboost/parameters/gpu_wakeup 1
+/init.flounder.rc-28-    # Turn on swap
+/init.flounder.rc:29:    swapon_all /fstab.flounder
+/init.flounder.rc-30-
+/init.flounder.rc-31-on post-fs-data
+/init.flounder.rc-32-    # Now that are booted all the way and out of mount panics, ensure that we panic on later errors.
+/init.flounder.rc-33-    # This is a hack to work around the fact that we can't recover from all errors that would lead to a panic
+/init.flounder.rc-34-    # during the initial mount (http://b/17382778), yet we need to panic on emmc errors (http://b/17640053)
+/init.flounder.rc-35-    # For a remount only the flags and the target mount point are relevant.
+/init.flounder.rc-36-    mount dummy dummy /data remount nosuid nodev noatime rw seclabel,background_gc=on,user_xattr,acl,errors=panic
+/init.flounder.rc-37-
+--
+/init.flounder64.rc-7-on init
+/init.flounder64.rc-8-    # Load persistent dm-verity state
+/init.flounder64.rc-9-    #verity_load_state
+/init.flounder64.rc-10-
+/init.flounder64.rc-11-    start watchdogd
+/init.flounder64.rc-12-
+/init.flounder64.rc-13-    symlink /sdcard /storage/sdcard0
+/init.flounder64.rc-14-
+/init.flounder64.rc:15:    write /sys/block/zram0/comp_algorithm lz4
+/init.flounder64.rc:16:    write /sys/block/zram0/max_comp_streams 2
+/init.flounder64.rc-17-
+/init.flounder64.rc-18-    # Swap in only 1 page at a time
+/init.flounder64.rc-19-    write /proc/sys/vm/page-cluster 0
+/init.flounder64.rc-20-
+/init.flounder64.rc-21-on post-fs
+/init.flounder64.rc-22-    # turn off nvmap page pool b/29389829
+/init.flounder64.rc-23-    write /sys/module/nvmap_pp/parameters/pool_size 0
+/init.flounder64.rc-24-    write /sys/module/nvmap_pp/parameters/enable_page_pools 0
+/init.flounder64.rc-25-
+/init.flounder64.rc-26-    write /sys/power/gpu_power_on 1
+/init.flounder64.rc-27-    write /sys/module/input_cfboost/parameters/gpu_wakeup 1
+/init.flounder64.rc-28-    # Turn on swap
+/init.flounder64.rc:29:    swapon_all /fstab.flounder
+/init.flounder64.rc-30-
+/init.flounder64.rc-31-on post-fs-data
+/init.flounder64.rc-32-    # Now that are booted all the way and out of mount panics, ensure that we panic on later errors.
+/init.flounder64.rc-33-    # This is a hack to work around the fact that we can't recover from all errors that would lead to a panic
+/init.flounder64.rc-34-    # during the initial mount (http://b/17382778), yet we need to panic on emmc errors (http://b/17640053)
+/init.flounder64.rc-35-    # For a remount only the flags and the target mount point are relevant.
+/init.flounder64.rc-36-    mount dummy dummy /data remount nosuid nodev noatime rw seclabel,background_gc=on,user_xattr,acl,errors=panic
+/init.flounder64.rc-37-
