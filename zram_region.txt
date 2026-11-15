@@ -1,0 +1,323 @@
+IMAGE BIAS: 0x7ffc0
+FILE RANGE: 0x437400 - 0x437900
+0x00437400  ldr      w1, [x5, #0x2d8]
+0x00437404  bl       #0xa187f0  [target file+0x998830]
+0x00437408  b        #0x4b733c  [target file+0x43737C]
+0x0043740C  stp      x29, x30, [sp, #-0x30]!
+0x00437410  adrp     x1, #0x10f1000
+0x00437414  mov      x29, sp
+0x00437418  str      x21, [sp, #0x20]
+0x0043741C  mov      x21, x2
+0x00437420  stp      x19, x20, [sp, #0x10]
+0x00437424  ldr      x20, [x0, #0x2f8]
+0x00437428  ldrb     w0, [x1, #0x838]
+0x0043742C  cbz      w0, #0x4b7434
+0x00437430  add      x19, x20, #0x18
+0x00437434  mov      x0, x19
+0x00437438  bl       #0xa218d8  [target file+0x9A1918]
+0x0043743C  ldr      x20, [x20, #0x38]
+0x00437440  mov      x0, x19
+0x00437444  bl       #0xdfa0c  [target file+0x5FA4C]
+0x00437448  adrp     x2, #0xcc1000
+0x0043744C  lsl      x3, x20, #0xc
+0x00437450  mov      x0, x21
+0x00437454  mov      x1, #0x1000
+0x00437458  add      x2, x2, #0xa30
+0x0043745C  bl       #0x34277c  [target file+0x2C27BC]
+0x00437460  sxtw     x0, w0
+0x00437464  ldp      x19, x20, [sp, #0x10]
+0x00437468  ldr      x21, [sp, #0x20]
+0x0043746C  ldp      x29, x30, [sp], #0x30
+0x00437470  ret      
+0x00437474  mov      x0, sp
+0x00437478  adrp     x3, #0xd15000
+0x0043747C  and      x2, x0, #0xffffffffffffc000
+0x00437480  adrp     x4, #0xd15000
+0x00437484  adrp     x0, #0xd15000
+0x00437488  add      x3, x3, #0x538
+0x0043748C  add      x4, x4, #0x440
+0x00437490  add      x0, x0, #0x3f0
+0x00437494  ldr      x5, [x2, #0x10]
+0x00437498  mov      w2, #1
+0x0043749C  strb     w2, [x1, #0x838]
+0x004374A0  add      x2, x5, #0x490
+0x004374A4  ldr      w1, [x5, #0x2d8]
+0x004374A8  bl       #0xa187f0  [target file+0x998830]
+0x004374AC  b        #0x4b73f0  [target file+0x437430]
+0x004374B0  stp      x29, x30, [sp, #-0x40]!
+0x004374B4  adrp     x1, #0x10f1000
+0x004374B8  mov      x29, sp
+0x004374BC  str      x21, [sp, #0x20]
+0x004374C0  mov      x21, x2
+0x004374C4  stp      x19, x20, [sp, #0x10]
+0x004374C8  ldr      x19, [x0, #0x2f8]
+0x004374CC  ldrb     w0, [x1, #0x838]
+0x004374D0  cbz      w0, #0x4b74f0
+0x004374D4  add      x20, x19, #0x18
+0x004374D8  mov      x0, x20
+0x004374DC  bl       #0xa218d8  [target file+0x9A1918]
+0x004374E0  ldr      x3, [x19, #0xc0]
+0x004374E4  cbz      x3, #0x4b74b8
+0x004374E8  ldr      x0, [x19]
+0x004374EC  ldr      x0, [x0, #8]
+0x004374F0  bl       #0x1a6ddc  [target file+0x126E1C]
+0x004374F4  lsl      x3, x0, #0xc
+0x004374F8  mov      x0, x20
+0x004374FC  str      x3, [x29, #0x38]
+0x00437500  bl       #0xdfa0c  [target file+0x5FA4C]
+0x00437504  ldr      x3, [x29, #0x38]
+0x00437508  adrp     x2, #0xcc1000
+0x0043750C  mov      x0, x21
+0x00437510  mov      x1, #0x1000
+0x00437514  add      x2, x2, #0xa30
+0x00437518  bl       #0x34277c  [target file+0x2C27BC]
+0x0043751C  ldr      x21, [sp, #0x20]
+0x00437520  ldp      x19, x20, [sp, #0x10]
+0x00437524  sxtw     x0, w0
+0x00437528  ldp      x29, x30, [sp], #0x40
+0x0043752C  ret      
+0x00437530  mov      x0, sp
+0x00437534  adrp     x3, #0xd15000
+0x00437538  and      x2, x0, #0xffffffffffffc000
+0x0043753C  adrp     x4, #0xd15000
+0x00437540  adrp     x0, #0xd15000
+0x00437544  add      x3, x3, #0x548
+0x00437548  add      x4, x4, #0x440
+0x0043754C  add      x0, x0, #0x3f0
+0x00437550  ldr      x5, [x2, #0x10]
+0x00437554  mov      w2, #1
+0x00437558  strb     w2, [x1, #0x838]
+0x0043755C  add      x2, x5, #0x490
+0x00437560  ldr      w1, [x5, #0x2d8]
+0x00437564  bl       #0xa187f0  [target file+0x998830]
+0x00437568  b        #0x4b7494  [target file+0x4374D4]
+0x0043756C  stp      x29, x30, [sp, #-0x30]!
+0x00437570  mov      x29, sp
+0x00437574  stp      x19, x20, [sp, #0x10]
+0x00437578  ldr      x20, [x0, #0x2f8]
+0x0043757C  str      x2, [x29, #0x20]
+0x00437580  add      x19, x20, #0x18
+0x00437584  mov      x0, x19
+0x00437588  bl       #0xa218d8  [target file+0x9A1918]
+0x0043758C  ldr      x1, [x20, #0xc0]
+0x00437590  mov      x0, x19
+0x00437594  cmp      x1, xzr
+0x00437598  cset     w3, ne
+0x0043759C  str      x3, [x29, #0x28]
+0x004375A0  bl       #0xdfa0c  [target file+0x5FA4C]
+0x004375A4  ldr      x2, [x29, #0x20]
+0x004375A8  mov      x1, #0x1000
+0x004375AC  ldr      x3, [x29, #0x28]
+0x004375B0  mov      x0, x2
+0x004375B4  adrp     x2, #0xdba000
+0x004375B8  add      x2, x2, #0x248
+0x004375BC  bl       #0x34277c  [target file+0x2C27BC]
+0x004375C0  sxtw     x0, w0
+0x004375C4  ldp      x19, x20, [sp, #0x10]
+0x004375C8  ldp      x29, x30, [sp], #0x30
+0x004375CC  ret      
+0x004375D0  stp      x29, x30, [sp, #-0x40]!
+0x004375D4  mov      x29, sp
+0x004375D8  stp      x19, x20, [sp, #0x10]
+0x004375DC  str      x21, [sp, #0x20]
+0x004375E0  mov      x19, x3
+0x004375E4  str      x2, [x29, #0x38]
+0x004375E8  ldr      x20, [x0, #0x2f8]
+0x004375EC  add      x21, x20, #0x18
+0x004375F0  mov      x0, x21
+0x004375F4  bl       #0xa21910  [target file+0x9A1950]
+0x004375F8  ldr      x0, [x20, #0xc0]
+0x004375FC  ldr      x2, [x29, #0x38]
+0x00437600  cbnz     x0, #0x4b75f0
+0x00437604  mov      x1, x2
+0x00437608  add      x0, x20, #0xc8
+0x0043760C  mov      x2, #0xa
+0x00437610  bl       #0x33f3ac  [target file+0x2BF3EC]
+0x00437614  mov      x0, x21
+0x00437618  bl       #0xdfa20  [target file+0x5FA60]
+0x0043761C  mov      x0, x19
+0x00437620  ldp      x19, x20, [sp, #0x10]
+0x00437624  ldr      x21, [sp, #0x20]
+0x00437628  ldp      x29, x30, [sp], #0x40
+0x0043762C  ret      
+0x00437630  mov      x0, x21
+0x00437634  bl       #0xdfa20  [target file+0x5FA60]
+0x00437638  adrp     x0, #0xd15000
+0x0043763C  add      x0, x0, #0x558
+0x00437640  bl       #0xa187f0  [target file+0x998830]
+0x00437644  mov      x0, #-0x10
+0x00437648  b        #0x4b75e0  [target file+0x437620]
+0x0043764C  stp      x29, x30, [sp, #-0x30]!
+0x00437650  mov      x29, sp
+0x00437654  stp      x19, x20, [sp, #0x10]
+0x00437658  ldr      x20, [x0, #0x2f8]
+0x0043765C  str      x2, [x29, #0x28]
+0x00437660  add      x19, x20, #0x18
+0x00437664  mov      x0, x19
+0x00437668  bl       #0xa218d8  [target file+0x9A1918]
+0x0043766C  ldr      x1, [x29, #0x28]
+0x00437670  add      x0, x20, #0xc8
+0x00437674  bl       #0x4b6960  [target file+0x4369A0]
+0x00437678  mov      x20, x0
+0x0043767C  mov      x0, x19
+0x00437680  bl       #0xdfa0c  [target file+0x5FA4C]
+0x00437684  mov      x0, x20
+0x00437688  ldp      x19, x20, [sp, #0x10]
+0x0043768C  ldp      x29, x30, [sp], #0x30
+0x00437690  ret      
+0x00437694  stp      x29, x30, [sp, #-0x40]!
+0x00437698  mov      w1, #0
+0x0043769C  mov      x29, sp
+0x004376A0  stp      x19, x20, [sp, #0x10]
+0x004376A4  str      x21, [sp, #0x20]
+0x004376A8  mov      x19, x3
+0x004376AC  ldr      x20, [x0, #0x2f8]
+0x004376B0  mov      x0, x2
+0x004376B4  add      x2, x29, #0x3c
+0x004376B8  bl       #0x349ef4  [target file+0x2C9F34]
+0x004376BC  tbnz     w0, #0x1f, #0x4b76ec
+0x004376C0  ldr      w0, [x29, #0x3c]
+0x004376C4  cmp      w0, wzr
+0x004376C8  b.le     #0x4b7700  [target file+0x437740]
+0x004376CC  add      x21, x20, #0x18
+0x004376D0  mov      x0, x21
+0x004376D4  bl       #0xa21910  [target file+0x9A1950]
+0x004376D8  ldr      x0, [x20, #0xc0]
+0x004376DC  cbnz     x0, #0x4b76c4
+0x004376E0  ldr      w0, [x29, #0x3c]
+0x004376E4  str      w0, [x20, #0x40]
+0x004376E8  mov      x0, x21
+0x004376EC  bl       #0xdfa20  [target file+0x5FA60]
+0x004376F0  sxtw     x0, w19
+0x004376F4  ldp      x19, x20, [sp, #0x10]
+0x004376F8  ldr      x21, [sp, #0x20]
+0x004376FC  ldp      x29, x30, [sp], #0x40
+0x00437700  ret      
+0x00437704  ldr      x0, [x20, #8]
+0x00437708  ldr      w1, [x29, #0x3c]
+0x0043770C  bl       #0x4b6a2c  [target file+0x436A6C]
+0x00437710  uxtb     w0, w0
+0x00437714  cbnz     w0, #0x4b76a0
+0x00437718  adrp     x0, #0xd15000
+0x0043771C  mov      w19, #-0x16
+0x00437720  add      x0, x0, #0x590
+0x00437724  bl       #0xa187f0  [target file+0x998830]
+0x00437728  b        #0x4b76a8  [target file+0x4376E8]
+0x0043772C  ldp      x19, x20, [sp, #0x10]
+0x00437730  ldr      x21, [sp, #0x20]
+0x00437734  sxtw     x0, w0
+0x00437738  ldp      x29, x30, [sp], #0x40
+0x0043773C  ret      
+0x00437740  mov      x0, #-0x16
+0x00437744  b        #0x4b76b4  [target file+0x4376F4]
+0x00437748  stp      x29, x30, [sp, #-0x40]!
+0x0043774C  mov      w1, #0xa
+0x00437750  mov      x29, sp
+0x00437754  stp      x19, x20, [sp, #0x10]
+0x00437758  str      x21, [sp, #0x20]
+0x0043775C  mov      x19, x3
+0x00437760  ldr      x20, [x0, #0x2f8]
+0x00437764  mov      x0, x2
+0x00437768  add      x2, x29, #0x38
+0x0043776C  bl       #0x349d64  [target file+0x2C9DA4]
+0x00437770  cbnz     w0, #0x4b7780
+0x00437774  ldr      x0, [x29, #0x38]
+0x00437778  cbnz     x0, #0x4b7780
+0x0043777C  add      x21, x20, #0x18
+0x00437780  mov      x0, x21
+0x00437784  bl       #0xa218d8  [target file+0x9A1918]
+0x00437788  ldr      x0, [x20, #0xc0]
+0x0043778C  cbnz     x0, #0x4b776c
+0x00437790  mov      x0, x21
+0x00437794  bl       #0xdfa0c  [target file+0x5FA4C]
+0x00437798  ldr      x21, [sp, #0x20]
+0x0043779C  mov      x0, x19
+0x004377A0  ldp      x19, x20, [sp, #0x10]
+0x004377A4  ldp      x29, x30, [sp], #0x40
+0x004377A8  ret      
+0x004377AC  ldr      x0, [x20]
+0x004377B0  ldr      x0, [x0, #8]
+0x004377B4  bl       #0x1a6ddc  [target file+0x126E1C]
+0x004377B8  str      x0, [x20, #0x98]
+0x004377BC  b        #0x4b7750  [target file+0x437790]
+0x004377C0  ldp      x19, x20, [sp, #0x10]
+0x004377C4  ldr      x21, [sp, #0x20]
+0x004377C8  mov      x0, #-0x16
+0x004377CC  ldp      x29, x30, [sp], #0x40
+0x004377D0  ret      
+0x004377D4  stp      x29, x30, [sp, #-0x50]!
+0x004377D8  mov      x29, sp
+0x004377DC  stp      x19, x20, [sp, #0x10]
+0x004377E0  stp      x21, x22, [sp, #0x20]
+0x004377E4  add      x1, x29, #0x48
+0x004377E8  str      x2, [x29, #0x38]
+0x004377EC  ldr      x21, [x0, #0x2f8]
+0x004377F0  mov      x0, x2
+0x004377F4  mov      x20, x3
+0x004377F8  bl       #0x33614c  [target file+0x2B618C]
+0x004377FC  mov      x19, x0
+0x00437800  ldr      x2, [x29, #0x38]
+0x00437804  ldr      x0, [x29, #0x48]
+0x00437808  cmp      x2, x0
+0x0043780C  b.eq     #0x4b7804  [target file+0x437844]
+0x00437810  add      x22, x21, #0x18
+0x00437814  add      x19, x19, #0xfff
+0x00437818  mov      x0, x22
+0x0043781C  lsr      x19, x19, #0xc
+0x00437820  bl       #0xa21910  [target file+0x9A1950]
+0x00437824  str      x19, [x21, #0x38]
+0x00437828  mov      x0, x22
+0x0043782C  bl       #0xdfa20  [target file+0x5FA60]
+0x00437830  mov      x0, x20
+0x00437834  ldp      x19, x20, [sp, #0x10]
+0x00437838  ldp      x21, x22, [sp, #0x20]
+0x0043783C  ldp      x29, x30, [sp], #0x50
+0x00437840  ret      
+0x00437844  mov      x0, #-0x16
+0x00437848  b        #0x4b77f4  [target file+0x437834]
+0x0043784C  stp      x29, x30, [sp, #-0x30]!
+0x00437850  mov      x29, sp
+0x00437854  stp      x19, x20, [sp, #0x10]
+0x00437858  str      x21, [sp, #0x20]
+0x0043785C  mov      x20, x3
+0x00437860  ldr      x19, [x0, #0x2f8]
+0x00437864  add      x21, x19, #0x18
+0x00437868  mov      x0, x21
+0x0043786C  bl       #0xa218d8  [target file+0x9A1918]
+0x00437870  ldr      x0, [x19, #0xc0]
+0x00437874  cbz      x0, #0x4b7874
+0x00437878  ldr      x0, [x19]
+0x0043787C  ldr      x0, [x0, #8]
+0x00437880  bl       #0x1a7958  [target file+0x127998]
+0x00437884  add      x2, x19, #0x60
+0x00437888  ldxr     x3, [x2]
+0x0043788C  add      x3, x3, x0
+0x00437890  stxr     w1, x3, [x2]
+0x00437894  cbnz     w1, #0x4b7848
+0x00437898  mov      x0, x21
+0x0043789C  bl       #0xdfa0c  [target file+0x5FA4C]
+0x004378A0  mov      x0, x20
+0x004378A4  ldp      x19, x20, [sp, #0x10]
+0x004378A8  ldr      x21, [sp, #0x20]
+0x004378AC  ldp      x29, x30, [sp], #0x30
+0x004378B0  ret      
+0x004378B4  mov      x0, x21
+0x004378B8  bl       #0xdfa0c  [target file+0x5FA4C]
+0x004378BC  mov      x0, #-0x16
+0x004378C0  b        #0x4b7864  [target file+0x4378A4]
+0x004378C4  stp      x29, x30, [sp, #-0x30]!
+0x004378C8  mov      x29, sp
+0x004378CC  stp      x19, x20, [sp, #0x10]
+0x004378D0  stp      x21, x22, [sp, #0x20]
+0x004378D4  mov      x19, x0
+0x004378D8  lsl      x22, x1, #4
+0x004378DC  ldr      x21, [x0]
+0x004378E0  ldr      x0, [x21]
+0x004378E4  ldr      x2, [x0, x22]
+0x004378E8  cbz      x2, #0x4b7924
+0x004378EC  ldr      x0, [x21, #8]
+0x004378F0  mov      x20, x1
+0x004378F4  mov      x1, x2
+0x004378F8  bl       #0x1a7854  [target file+0x127894]
+0x004378FC  ldr      x0, [x21]
+DONE
