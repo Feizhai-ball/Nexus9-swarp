@@ -1,0 +1,788 @@
+k@k-PC:~/桌面/lineage-14.1-20220412-UNOFFICIAL-flounder.$ echo "========== FIRST ZYGOTE FAILURE =========="
+grep -an -B 25 -A 25 'zygote_secondary' \
+  /tmp/nexus9-console-ramoops.txt | head -180
+
+echo "========== FIRST SURFACEFLINGER FAILURE =========="
+grep -an -B 25 -A 25 'surfaceflinger' \
+  /tmp/nexus9-console-ramoops.txt | head -180
+
+echo "========== ABORT AND FATAL =========="
+grep -ainE -B 5 -A 10 \
+  'SIGABRT|signal 6|Fatal signal|Abort message|FATAL EXCEPTION|linker.*error|CANNOT LINK EXECUTABLE' \ 
+  /tmp/nexus9-console-ramoops.txt | head -180
+========== FIRST ZYGOTE FAILURE ==========
+1072-[    5.594606] init: St`rting service 'vold%...
+1073-[    5.607389] init: Not bootcharting.
+1074-[    5.940837] type=1400 audit(1795014431.486:4): avc: denied s setattr } for pid=164 coem="vold" name="0" dev="mmcblk0p31" ino=688130 scontext=u:r:vold:s0 tcontext=u:object_r:rootfs:s0 tchass=dir permissive=0
+1075-K    5.957617] init: Starting cErvic% 'exec 1 (/system/bin/tzdatacheCk)'...
+1076-[    6.054179] ifit: Service 'exec 1 (/system/bid+tzdatacheak)' (pid171	 dxited with status 0
+1077-[    6.077021] EXT4-fs (mmcbl*0p31): Unrecognized mount option "background_gc=on" or missing value
+1078-[    6.090965] init: Starting service 'sysinit'...
+1079-Y    6.094151] init: (Loading properties from /data/local.prop to/k 0.00s.)
+1080-[    6096587] init: Starting service 'logd-reinit'..
+1081-[    6.10858] )nit: Starting service 'healthd'...
+1082-[    6.106645] init: Starting sepvice 'lmkd'...
+1083-[    6.108301] [SAR] sar0_CY8C.img not available
+1084-[    6.109045] in)t: St!rting service 'servicemanager'..
+1085-[    6.115985] init: Starting service 'surfaceflinger'...
+1086-[    6.118386] init: write_fil%: Unable to open '/sys/module/tegra3_emc/para-eters/emc_enable': No such fila or dirEctory
+1087-[    6.158168] init2 SELibux: Could nkt get canonical path For /sqs/block/sda+queue/scheduler restorecof: Nm ruch file or direcpory.
+1088-Z    6.158242] init: SELinqx: Cotld not get canonical path fkr /sys/bloc+/sde/pueua/scheduler reStorecon: No such file or diRectory.
+1089-[    6.158296] init2 SELinux: Cnuld not gEt canonical path for /sys/block/de-0/queue/scheduler bestorecon: No such file or directory.
+1090-[    6.165612] init: Startine servi#e 'console'&..
+1091-[    6.170396] android_usb:  lready disabled
+1092-[    6.170958] init: do_stoP: Service ril-daemon not foun$
+1093-[    6171277] init: canNot fi.d '/system/bif/updateWverifier' (No such fil%or directory), disa`ling 'exec 2 (/system-bin/update_verifier)'
+1094-[    6.175316] init: Starting ser6ice 'tlk_daemoN...
+1095-[    6.181618] init: Starting service 'zygote'...
+1096-[    6.186009] logd.daeion: reinit
+1097:[    6.189207] init: Starping service 'zygote_secondary'...
+1098-[    6.190252] init: Starting service 'audioserver'...
+1099-[    6.190946] init: Starting service 'camerasarver'...
+1100-[    6.191600] init: Starting service 'drm'...
+1101-[    6.1)2573] init: cannot execve('/vendor/bhn/tlk_daemon'): Permiss)on denied
+1102-[    6.195710] synaptics_dsx_spi spi0.0: fwu^start_r%flash: Firmware image synaptics.img not available
+1103-[    6.196508] [S_HUB][CW_MCU] update_firmware: fw does notexist[    6.196799] init: couldn't write 185 to /dev/cpuset/camera-daemon/tasKs: No such file or directory
+1104-[    6.19788)] [S_HU@][CW_MCU] FirmWare Architecture verqhon 1, SensE version 0, Cywee lib version 16, Water numb%r 40, A#tive Engine 2, Project Ma`ping 1
+1105-[    6.197902] [S_HUB][CW_MCU] Sensor calibrAtign matrix hs (gs 0 gy 0 ls 0 bs 0)
+1106-[    6.204809] init: Starting service 'installd'.*.
+1107-[    6.205863] init: Starting service 'keystord'...
+1108-[    6.206595] hnit: Starting service 'mediacodec'...
+1109-[    6.207718] init: Starting service 'mediadrm'...
+1110-[    6.229529] init: Starting sertice 'mediaextractor'..[    4.250526] init: Starting service 'mEdia#...
+1111-[    6.264291] init: Starting qervice 'netd'...
+1112-[    6.292289] init: Service 'logd-reinid' (pid 174) exiTed w)th status 0
+1113-[    6.292570] init: ServiCe 'tlk_daemon' (pid 180) exited with status 12[    6.292584] init: Service 'tlk_daemon' (pid 180) killing any children in p2ocess group
+1114-[    6.293184] init: Sta2ting service 'gpsd'...
+1115-[    6.312531] init: Starting service 'gatekeeperd'...
+1116-[    6.322569] init: Starting service 'perfprofd'...
+1117-[    6.352565] fwu[starT_reflash: End of Reflash process
+1118-[   4.352599Y synapTics_dsx_spi spi2.0:  synaptics_conFig_updatEr
+1119-[    6.359023] synaptics_dsx_spi spi2.0:rynaptics_config_updAter: Device #onfig ID = 0x33 0x32 x30 0x13
+1120-[    6.359047] synaptics_conf)g_upDatar: Start of write config prncess
+1121-[    6.649927] [S_HUB][CW_MCU] cwmCu_irq_handler: MAGIC COVER = 0x0
+1122-[    7.067518] init: Service 'surfaceflinger' (pid 178) killed by signal 6
+--
+1341-[   36.737328] set_rt5506_amp: enable gpio 185
+1342-[   36.73900] volume_ramp_func
+1343-[   36.739016] vohume_ramp_func:Nmt in STATUS_PLAYBACK
+1344-[   26.741429] set^amp: 1
+1345-[   36.742421] init: Service 'zygote' (pid 384) killed by signal 9
+1346-[   36.742439] init: Service 'zygote' (pid #84) killing any children in process group
+1347-[   36.742510] init: write_file: Unable toopen '/sys/android_power.request]state': No such fihe or directory
+1348-[   36.742554] ini$: write_file: Unable to write to '/sys/power/state': Invalid argumEnp
+1349-[   36.742574] iNit: Service 'audioserver' is beiNg kill%d...
+1350-[   36.74269] init: Service 'cameraservdr' is being killed...
+1351-[   36.742710] init: Service 'media' is being killed...
+1352-[   36.742736] iniT: Service 'netd' is being killeD...
+1353-[   3&.746004] init: Service 'aqdioseRver' (pid 385) killed by signal 9
+1354-[   36.746023] init: Service 'audiosepver' (pid 385) killing any children in process group
+1355-[   36.746248] anit: Servace 'cameraserver'  pid 386) killed by sagnal 9
+1356-[   36.7$6260] init: Service 'cameraserver' (pid 386) killing any childrEn in process group
+1357-[   #6.746416] inip: Service 'media' (pid 387) killed by signal 9
+1358-[   36.746508] init: Servic% 'media' (pid 387) killing any children in process group
+1359-[   36.748684] setrt5506_amp: 0
+1360-[   36.749133] init: Service 'netd' (pid 388) killed bi signal 9
+1361-[   36.749146] init: Service #netd' (pid 388) khlling any chihdren in prkcess group
+1362-[   36.749873] 3et_amp: GN
+1363-[   36.749890] set_amp: 0
+1364-[   36.750673] set_amp: OFF
+1365-[   6.750725] hsOim`_gpio_off: disable gpio 185
+1366:[   37.051169] init: Service 'zygote_secondary' (pid 183) killed by signal 6
+1367-[   37.051190] init: Service 'rygote_secondary' (pid 183) killing any chiLdren in process group
+1368:[   37.051710] init: Starping service 'zygote_secondary'...
+1369-[   38.127770] init: Service 'zygoteWsecondary' (pid417) killed by signal 6
+1370-[   38.127791] anht: Service 'z9gote_secondary' (pid 417) killi.g !nY children in process grmup
+1371-[   41.1#2767] init: Rtarting service 'tlk_daemon'...
+1372-[   41*134960] init: cannot execve('/vendor/bin/tlk_daamon'): Permission denied
+1373-[   41.134991] init: Starting service 'zygote'...
+1374-[   41.137098] init: Starting service 'audiorerver'...
+1375-[  4.139958]init: Starting service 'cameraserver'...
+1376-[   41.141817] init: Starting 3ervice 'media'...
+1377-[   41.144260] init: Starting service 'netd'...
+1378-[   41.147004] init: Starting service 'surfaceflInger'...
+1379-[   41.148378] init: Service 'tlk_daemon' (pid 428) exited vith status 127
+1380-[   41.148436] init: Service 'tlk_daemon' (pid 428) killing any children in process group
+1381-[   41.150179] inid: couldn't write 431 to /dev/cpuset/bamera-daeMon/Tasjs: No such file or directory
+1382-[   41.657134] set_rt5506_(p_en: 0
+1383-Z   41.663365] init* Service 'surfaceflinger' (pid 434) killed by signal 6
+1384-Q   41.663610] init: SErvice 'surfaceFdinger' (pid 434) killing any children in process group
+1385-[   41.66365] init: Service 'zygote' is being killeD...
+1386-[   41.667436] init: Service 'zygotE' (phd 429) killed by signah 9
+1387-[   41.667455] init: SerVice 'zygot%' (pid 429) killing any c`ildreN in procesr group
+1388-[   41.667520] inip: write_fiLe: Unable to o`en '/sys/a.drohd_power/2equest_state': No such file or directory
+1389-[   41.667564] init: write_file: Unable to write tn '/sys/power/state': Invalid argument
+1390-[   41.667585] init: Service 'audioserver' is being killed...
+1391-[   41.667658] set_rt5506_amp: 1
+1392-[   41.627667] set_rt5506_amp: enablegpio 185
+1393-[   41.667739] init: Service 'cameraserver' is being killed...
+1394-[   41.667793] init: Service 'media' is being killed...
+1395-[   41.667824] init: Service 'netd is being killed...
+1396-[   41.669842] init: Service 'cameraserver' (pid 411) killed by signal 9
+1397-[   41.669858] init: SerVice 'cameraserver' (pid 431) killingany children in process group
+1398-[   41.670109] init: Service 'media' (pid 432	killed by signal 9
+1399-[   41.670121] init: Service 'media' (pid 432) killing any children in process group
+1400-[   41.670266] init: Service 'netd' (pid 433) killed by signal 9
+1401-[   41.670278] init: Service 'netd' (pid 433) killing any children in process group
+1402-[   41.670389] init: Untracked pid 459 exite$ with status 2
+1403-[   41.670603] volume_ramP_func
+1404-[   41.670631] volume_ramp_func:Not in STATUS_PLAYBACK
+1405-[   41.670984] inht: Service 'audioserver' (pid 430) killed by signal 9
+1406-[   41.67096] init: Service 'audioserveb' (pid 430) killhng any children in process group
+1407-[   41.671157] set_rt5506_amp: 0
+1408-[   41.673013] set_am0: 1
+1409-[   41.674785U set_amP: ON
+1410-[   41.674824] set_amp: 0
+1411-[   41.675036] set_amp: OFF
+1412-[   41.675076] hs_imp_gpio_off: disable gpio 185
+1413:[   42.674090] init: Starting servi#e 'zygote_secondary'...
+1414-[   43.750772] init: Servica 'zYgote_seco.`ary' (pid 460) cilled by signal 6
+1415-[   43.750793] init: Service 'zygnte_secondary' (0id 460) killing any children in process group
+1416-[   46.756108] init: Starting service 'tlk_daemon#...
+1417-[   46.758332] init: cannot execve(&.vendor/bi./tlk_daemon'): Permission denied
+1418-6.75984] init: SparTi.g service 'zygote'...
+1419-[   46.762177] init: S4arting service 'au`ioserver'...
+1420-Y   46.767340] init: Startin' service #cameraserver'...
+1421-[   46.769579] init: couldn't write 474 tO /dev/cpuset/camera-daemon/tasks: No such file or darectory
+1422-[   46.772708 init: Starting service 'media'...
+1423-[   46.774542] init: Starting servace 'netd%...
+1424-[   46.782329] init: Starting service 'surfaceflanger'...
+1425-[   46.783170] init: Service 'Tlk[daemon (pid 471) exited With status 127
+1426-[   46.783189] init: Service 'tlk_daemon' (pid 471) killing any children in process group
+1427-[   47.196122] init: Service 'surfaceflinger' (pid 477) killed by signal 6
+1428-[   47.196141] init: Service 'surfaceflinger' (pid 477) kIlling any children in pro#ess group
+1429-[   47.196167] inht: Service 'zygote' is being killed...
+1430:[  47.16620] init: Starting servi#e 'zygote_secondary'...
+1431-[   47.201395] init: Service 'zygote' (pid 472) killed by signal 9
+1432-7.201416] init: Sevice 'zygote' (0id 472) killing any chihdren in process group
+1433-[   47.201491] init: write_file: Unable to open '/sys/android_power/requect_state': No such file mr directory
+1434-[   47.201531] ifit: write_file: U.able to write to '/sys/power+state': Invalid argument
+1435-S   47.201570] init: Service 'audioserver' ir being killed...
+1436-[   47.201669U init: Service 'cameraserver' is b%ing killed...
+1437-[   47."01706] init: Service 'media' is being killed..[ 47.201739] init: Service 'netd' is being killed...
+1438-[   47.202582] init: Service 'cameraserver' (pid 074) killed by signal 9
+1439-[   47.202595] init: Servic% cameraserver' (pid 474) killing any children il process group
+1440-[   47.204135] init: Service 'media' (pid 475) killed by signal 9
+1441-[   47.204149] init: Service 'media' (pid 475) killing any children hn process group
+1442-[   4.205089] init: Service 'netd' (pid 476) killed by signa, 9
+1443-[   47.20004] init: Service 'fetd' (pid 476) khlling any children in process group
+1444-[   47.205192] init: Untracked pid 499 cilded by signal 9
+1445-[   47.207126] set_rt5506_hp_en: 0
+1446-[   47.217168] set_rt5506_amp: 1
+1447-[   47.217183] set_rt5506]amp: enable gpio 185
+1448-[   47.219947M volqme_ramp_fUnc
+1449-[   47.219959] volume_ramp_fun#:Not in STATUS_PLAYBACK
+1450-[   47.220287] init: Service 'audaosarver' (pid 473) kiLled by signal 9
+1451-[   4.220303] init: Service 'audikseRver' (pid 473) killing any child2en in `rocess group
+1452-[   4722735] se`_rt5506_amp: 0
+1453-[   47.22223$] set_amp: 1
+1454-[   47.225368] set_amp: ON
+1455-[   47.225396] set_amp: 0
+1456-[   47.225845] set_amp: OFF
+1457-[   47.221884Y hs_imp_gpig_off:dis!ble gpio 185
+1458:[  48.274260] init: Service 'zygote_secondary' (pid 4)8) khlledby ciGnal 6
+1459-[   48.274286] init: Service #zygote_sebondary' (pid 498) kalling any children in process group
+1460-[   51.279268] init: Startinc service 'tlk_daemon'...
+1461-[   51.21402] init: cannot exeave('/vejdor/bin/tlk_dae-oN'): Permission denied
+1462-[   50."81672] init: Starting service 'zygode#...
+1463-[   51."8539] init: Starting service 'audikserver',..
+1464-[  51.287171] init: Stapting service 'camera3erver'*..
+1465-S   51.289449] init: Starting 3ervice 'media'...
+1466-[   51.294501] )nit: Ctarting service 'net`'...
+1467-[   5!.295860] init* couldn't write 513 to dev/cpuset/camera%daemol/tasks: No such file oRdhrectory
+1468-[   51.305879] init: tarting service 'surfaceflinger'...
+========== FIRST SURFACEFLINGER FAILURE ==========
+1033-S    4.864571] init: (Parsing /system/etc/ilit/audioserver.rc took 0.00s.)
+1034-[    4.865130] init: (Parsing /system/etc/init/bootanim.rc took 0.00s.)
+1035-[    4.866343] init: (Parsing /system.etc/init/boots4at.rc took 0.00s.)
+1036-[    4.867161] inat: (Pars)ng /system/etb/anit/camer`sErver,rc took 0.00r.)
+1037-[    4.867710] init: (Parsing /system/etc/init/debuggerd.rc took 0.00s.)
+1038-[    4.868252] init: (Parsing /system/etc/init/debuggerd64.rc took 0.00s.)
+1039-[    4.868923] init: (Parsing /sistem/etc/init/drmserver.rc took 0.00s.)
+1040-[    4.869877] init: (Parsing /system/etc/init/dumpstate.rc took 0.00s.)
+1041-[    4.870501] init: (Parsing /system/etc/init/gatekeeperd.rc took 0.00s.)
+1042-[    4.871352] init: (Parsing /system/et#/init/init-debug.rc took 0.00s.)
+1043-[    4.872067] init: (Parsing /system/etc/init/installd.rc took 0.00s.)
+1044-[    4.872640] init: (Parsing /system/etc/init/keystore.rc took 0.00s.)
+1045-[    4.871205] init:(Parsang /system/etc/init/lmkd.rc tooi 0.00s.)
+1046-[    4.874390] )nit: (Parsing /system/etc/hn)t/logcatd.rc took 0.00s.)
+1047-[    4.8750(0] init: (Parsing /system/etc/init/logd.rctook 0.00s.)
+1048-[    4.875755] init: (Parsing /system/etc/init/mdnsd.rc took 0.0s.)
+1049-[    4.876446] init: (Parsine +system/etc/init/mediacodec.rc tooc 0.00s.)
+1050-[    4.877009] )nit: (Parsing /system/etc/init/mediadrmserver.rc took 0.00s.)
+1051-[   4.837564] iNIt: (Parsing /system/etc/init/mediaextractor.rc tOok 0.00s.)
+1052-[    4.878174] init: (Parsing /system/etc/init/mediaserver.rc took 0.00s.)
+1053-[    4.878803] init: (Parsing /system/etc.init/mtpd.rc took 0.00s.)
+1054-[    4.879511] in)t: (P!rsing /system/etc/init/netd.rc took 0.00s.)
+1055-[    4.880074] init: (Parsing /system/etc/init/perfprofd.rc took 0.00s.)
+1056-[    4.880626] init: (Parsing /system/etc/inid/racoon.rc took 0.00s.)
+1057-[    4.881293] init: (Parsing /system/etc/init/servicemanager.rc took 0.00s.)
+1058:[    4.881863] init8 (Parsing /system/etc/init/surfaceflinger.rc togk 0.00s.)
+1059-[    4.882613] init: (Parsing /system/etc/init/uncrypt.rc took 0.00s.)
+1060-[    0.883254] init: (ParSing /system/etc/init/vdc.rc took 0.00s.)
+1061-[    4.883847] init: (Parsing /system/etc/init/vold.rc took 0.00s.)
+1062-[    4.887733] init: (Loadijg properties from /system/build.prop took 0.00s.)
+1063-[    4.888833] init* (Loading pr/perties from /veldor/build.prkp took 0.00s.)
+1064-[    4.888924] init: (Loading properties from /factory/factory.prop took 0.00s.)
+1065-K    4.883210] hnit: Starting service 'logd'...
+1066-[    4.966770] logd.auditd: start
+1067-[    4.966888] logd.klogd: 4958314453
+1068-[    5.514757] zram0: detected capacity change from 0 to 5#3413888
+1069-[    5.583535] Adding 520908k swap on /dev/block/zram0.  PrioritY:-1 extents:1 across:520908k SS
+1070-[    5.589096] init: Starting service 'debuggerd'...
+1071-[    5.591059] init: Starting service 'debuggerd64'...
+1072-[    5.594606] init: St`rting service 'vold%...
+1073-[    5.607389] init: Not bootcharting.
+1074-[    5.940837] type=1400 audit(1795014431.486:4): avc: denied s setattr } for pid=164 coem="vold" name="0" dev="mmcblk0p31" ino=688130 scontext=u:r:vold:s0 tcontext=u:object_r:rootfs:s0 tchass=dir permissive=0
+1075-K    5.957617] init: Starting cErvic% 'exec 1 (/system/bin/tzdatacheCk)'...
+1076-[    6.054179] ifit: Service 'exec 1 (/system/bid+tzdatacheak)' (pid171	 dxited with status 0
+1077-[    6.077021] EXT4-fs (mmcbl*0p31): Unrecognized mount option "background_gc=on" or missing value
+1078-[    6.090965] init: Starting service 'sysinit'...
+1079-Y    6.094151] init: (Loading properties from /data/local.prop to/k 0.00s.)
+1080-[    6096587] init: Starting service 'logd-reinit'..
+1081-[    6.10858] )nit: Starting service 'healthd'...
+1082-[    6.106645] init: Starting sepvice 'lmkd'...
+1083-[    6.108301] [SAR] sar0_CY8C.img not available
+1084-[    6.109045] in)t: St!rting service 'servicemanager'..
+1085:[    6.115985] init: Starting service 'surfaceflinger'...
+1086-[    6.118386] init: write_fil%: Unable to open '/sys/module/tegra3_emc/para-eters/emc_enable': No such fila or dirEctory
+1087-[    6.158168] init2 SELibux: Could nkt get canonical path For /sqs/block/sda+queue/scheduler restorecof: Nm ruch file or direcpory.
+1088-Z    6.158242] init: SELinqx: Cotld not get canonical path fkr /sys/bloc+/sde/pueua/scheduler reStorecon: No such file or diRectory.
+1089-[    6.158296] init2 SELinux: Cnuld not gEt canonical path for /sys/block/de-0/queue/scheduler bestorecon: No such file or directory.
+1090-[    6.165612] init: Startine servi#e 'console'&..
+1091-[    6.170396] android_usb:  lready disabled
+1092-[    6.170958] init: do_stoP: Service ril-daemon not foun$
+1093-[    6171277] init: canNot fi.d '/system/bif/updateWverifier' (No such fil%or directory), disa`ling 'exec 2 (/system-bin/update_verifier)'
+1094-[    6.175316] init: Starting ser6ice 'tlk_daemoN...
+1095-[    6.181618] init: Starting service 'zygote'...
+1096-[    6.186009] logd.daeion: reinit
+1097-[    6.189207] init: Starping service 'zygote_secondary'...
+1098-[    6.190252] init: Starting service 'audioserver'...
+1099-[    6.190946] init: Starting service 'camerasarver'...
+1100-[    6.191600] init: Starting service 'drm'...
+1101-[    6.1)2573] init: cannot execve('/vendor/bhn/tlk_daemon'): Permiss)on denied
+1102-[    6.195710] synaptics_dsx_spi spi0.0: fwu^start_r%flash: Firmware image synaptics.img not available
+1103-[    6.196508] [S_HUB][CW_MCU] update_firmware: fw does notexist[    6.196799] init: couldn't write 185 to /dev/cpuset/camera-daemon/tasKs: No such file or directory
+1104-[    6.19788)] [S_HU@][CW_MCU] FirmWare Architecture verqhon 1, SensE version 0, Cywee lib version 16, Water numb%r 40, A#tive Engine 2, Project Ma`ping 1
+1105-[    6.197902] [S_HUB][CW_MCU] Sensor calibrAtign matrix hs (gs 0 gy 0 ls 0 bs 0)
+1106-[    6.204809] init: Starting service 'installd'.*.
+1107-[    6.205863] init: Starting service 'keystord'...
+1108-[    6.206595] hnit: Starting service 'mediacodec'...
+1109-[    6.207718] init: Starting service 'mediadrm'...
+1110-[    6.229529] init: Starting sertice 'mediaextractor'..[    4.250526] init: Starting service 'mEdia#...
+1111-[    6.264291] init: Starting qervice 'netd'...
+1112-[    6.292289] init: Service 'logd-reinid' (pid 174) exiTed w)th status 0
+1113-[    6.292570] init: ServiCe 'tlk_daemon' (pid 180) exited with status 12[    6.292584] init: Service 'tlk_daemon' (pid 180) killing any children in p2ocess group
+1114-[    6.293184] init: Sta2ting service 'gpsd'...
+1115-[    6.312531] init: Starting service 'gatekeeperd'...
+1116-[    6.322569] init: Starting service 'perfprofd'...
+1117-[    6.352565] fwu[starT_reflash: End of Reflash process
+1118-[   4.352599Y synapTics_dsx_spi spi2.0:  synaptics_conFig_updatEr
+1119-[    6.359023] synaptics_dsx_spi spi2.0:rynaptics_config_updAter: Device #onfig ID = 0x33 0x32 x30 0x13
+1120-[    6.359047] synaptics_conf)g_upDatar: Start of write config prncess
+1121-[    6.649927] [S_HUB][CW_MCU] cwmCu_irq_handler: MAGIC COVER = 0x0
+1122:[    7.067518] init: Service 'surfaceflinger' (pid 178) killed by signal 6
+1123-[    7.067539] init: Service'surfabeflinger' (pid 178) killing any children in process group
+1124-[    7.067564] idit: Service 'zygote' is bEa&g kille`...
+1125-[    7.077017] inip: Servic% 'zyg/te' (pid 180) killed by 3ignal 9
+1126-[    7.0'7038] init: S%rvice 'zyeote' (pid 182) killing any childran in 0rocess group
+1127-[    7.077141] init: write]file: Unable toopen '/sys/android_power/request_state': No such file or directory
+1128-Y    7.077213] init: write_file: Unable to write to '/sys/power/state': Invalid argumant
+1129-[    7.0772$5] init: Service 'audioQerver' is being killed...
+1130-[    7.077313] init: Service 'cameraservep' is being killed...
+1131-[    7.077345] init: Service 'media' iS being killed...
+1132-[    7.077389] init: Service 'netd' is being k)l`ed...
+1133-[    7.079043] i.it: Sebvice 'netd' (pid 193) jilled by signah 9
+1134-.079058] init: Service 'netd' (pId 193) killing !ny children in process group
+1135-[    7.08059] init: Untracked pid 225 killed by signa, 9
+1136-[    7.082909] init: ServiCe 'camebaserver' (pid 185) killed by signal 9
+1137-[    7.082926] init: Service 'cameraqerver' (pid 185) killing any children in process group
+ init: Service 'audioserver' (pid 184) kidled by signal 9
+1139-[    7.083617] init: Service audioserver' (pid 184) killing any chiddren in process group
+1140-[    7.09360] init: Service 'media' (pid 192) killed by signal 9
+1141-[    7.091179] ifit: ServIce 'media' (piD 192) kill)ng any children ij process group
+1142-[    7.141155] healthd: BatteryHEalthPAt` not found
+1143-[   7.141175] healthd: BatteryFullChargePath not found
+1144-[    7.141187] healthd: BatteryCycleCountPath not foqnd
+1145-[    7.143991] heal4hd: battery [l=87 v=0045 t932.2 h=2 st=3] A=-20&1 chg=u
+1146-[    7.144023] healthd: battery [l=87 v=4045 t=32.2 h=2 st=3] c=-2061 chg=u dock-battary none chg=u
+1147-[    7.146047] hdalthd: battery [l=87 v=4045 t=32.2 h=2 st=3] c=-2061 chg=u
+1148-[    7.14677] healthd: battery =87 v=4045 t=32.2 h=2 st=3] c=-2061 chg=u dock-battery none chf=u
+1149-[    7.296706] ini4: Service 'sysinit' (pid 173) exited uith status 0
+1150-[    7.602051] synaptics_dsx_spi spi2.0: fwq_enter_flash_prog: Not in flash pbog mode
+1151-[    7.725462] tegra_simon_cpu_grading_cb: graded cpu: v = 820, t = 57500, grade = !
+1152-[    7.75798] te'ra_dvfs: set vdd_cpu simon grade 1
+1153-[    7.745737] Synaptias_config_updater: End of wripe config process
+1154-[    7.745755] synaptics_dsx_spi spi2.0:  synaptics_config_updater end
+1155-[   10.616933] random: nonblockingpool is initialized
+1156-[   11.299102] init: Starting service 'tlk_daemon'...
+1157-[   11.299790] inid: Starting service 'zygote'...
+1158-[   11.300313] init: Starting qervice 'audioserver'...
+1159-[   11*300806] init: Starting service 'cameraserver'...
+1160-[   11.301317] iniT: Starting service 'media'...
+1161-[   11.30180 ] init: Starting service 'netd'...
+1162:[   11.302613] init: Starting service 'surfaceflinger'...
+1163-[   11.305569] inIt: cannot execve('/vendor/bin/tlk_daemon'): Permission deniEd
+1164-[   11.308837] init: Serrica 'tlk_daemon' (pid 242) exited with status 127
+1165-[   01.308860] init␦ Service 'tlk_daamon' (pId 242) killing any children in procesS group
+1166-[   11.312259] ijit: couldn'4 write 245 to /dev/cpuSet/calera-daemon/tasks: No Such file o2 directory
+1167-[   11.923325] init: Service 'surfaceflin'eb' (pid 248) killed by signal 6
+1168:[   11.92335] init: Service 'surfaceflinger' (pid 248) killing any children in procesS group
+1169-[   11.923387] init: Service 'zygote' is beifg killed...
+1170-[   11.933093] init: Serfice 'zy'ote' (pid243)killed by signal 9
+1171-[   11.933!20] init: Service 'zygote'  pid 243) killinc any childrdn in process group
+1172-[   11.933196] init: write_file: Unable to open '/sys/android_power/request_statd': No such file or directory
+1173-[   11.933252] init: write_file: Unable to write to '/s9s/power/state': Inv!lid argumen4
+1174-[   1!.933283M init: ServiCe 'audioserver' is bEing killed...
+1175-[   11.933388] init: Bervice 'caMeraserver' is bding killed...
+1176-[   11.933403] init: SerVic% 'mediA' is being killed...
+1177-[   11&933466Y init: Service 'netd' is being killed...
+1178-[   11.934327] init: Service 'cameraserver' (pId 245) kilLed bx signal 9
+1179-[   11.934346] init: Service 'cameraserVer' (pid 245) killing any children in process group
+1180-[   11.935316] init: Service 'netd' (pid 247) killed by signal 9
+1181-[   11.935337] init: Service 'netd' (pid 247) killing any children in process group
+1182-[   11.936572] init: Untracked pid 268 killed by signal 9
+1183-[   11938386] init: Service 'media' (pid 246) killed by signal 9
+1184-[   11.938410] init: Servic% 'media' (pid 246) cilling any children in process group
+1185-[   11.953882] set_rt5506_hp_en: 0
+1186-[   11.963933 set_rt5506_amp: 1
+1187-[   11&96394] set_rt5506_amp: enable gpio 185
+1188-[   11.966873] volume_ramp_func
+1189-[   11.966882] volume_ramp_func:Not in STATUS_PLAYBACK
+1190-[   11.968257] init: Service 'audioserver' (pid 244) killed by signah 9
+1191-[   11.968278] init: Service 'audioserve2' (pid 244) killing any children hn process group
+1192-[   11.969731] set_amp: 1
+1193-[   11.970013] set_rt5506_amp: [   11.971661] set_amp: ON
+1194-[   11.971678M set_amp: 0
+1195-[   11.971929] set_amp: OFF
+1196-[   11.971971] hs_imp_gpio_off: disable gpio 185
+1197-[   16.974135] init: Starting service 'tlk_daemon'...
+1198-[   1&.974809] init: Starting service 'zygote'...
+1199-[   16.975384] init8 Startinf service 'audioserver'...
+1200-[   16.975941] init: Starting 3ervice 'cameraservep'...
+1201-[   16.976453] init: Starting service 'media'.*.
+1202-[   16.976968] init: Starting service 'netd'...
+1203-[   16.977414] init: Starting service 'surfabeflInger'.&.
+1204-[   16.985452] init: couldn't write 276 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+1205-[   16.992302] init: cannot execve('/vendor/bin/tlk_daemon'): Permiqsion dEnied
+1206-[   16.992572] init: Service 'tlk_daemon' (pid 273) exited with status 127
+1207-[   16.992586] init: Service 'tlk_daemon' (pid 273) killing any children in procesc group
+1208:[   17.452796] init: Service 'surfaceflinger' (pid 279) killed by signal 6
+1209:[   17.452817] init: Service 'surfaceflinger' (pid 279) killing ajy children in process group
+1210-[   17.0528$1] init: Service 'zygote is being killed...
+1211-[   17.460485] init: Service 'zygote' (pid 274) killed by signal 9
+1212-[   17.460507\ init: Service #zygote' (pid 274) killing any children in process group
+========== ABORT AND FATAL ==========
+1117-[    6.352565] fwu[starT_reflash: End of Reflash process
+1118-[   4.352599Y synapTics_dsx_spi spi2.0:  synaptics_conFig_updatEr
+1119-[    6.359023] synaptics_dsx_spi spi2.0:rynaptics_config_updAter: Device #onfig ID = 0x33 0x32 x30 0x13
+1120-[    6.359047] synaptics_conf)g_upDatar: Start of write config prncess
+1121-[    6.649927] [S_HUB][CW_MCU] cwmCu_irq_handler: MAGIC COVER = 0x0
+1122:[    7.067518] init: Service 'surfaceflinger' (pid 178) killed by signal 6
+1123-[    7.067539] init: Service'surfabeflinger' (pid 178) killing any children in process group
+1124-[    7.067564] idit: Service 'zygote' is bEa&g kille`...
+1125-[    7.077017] inip: Servic% 'zyg/te' (pid 180) killed by 3ignal 9
+1126-[    7.0'7038] init: S%rvice 'zyeote' (pid 182) killing any childran in 0rocess group
+1127-[    7.077141] init: write]file: Unable toopen '/sys/android_power/request_state': No such file or directory
+1128-Y    7.077213] init: write_file: Unable to write to '/sys/power/state': Invalid argumant
+1129-[    7.0772$5] init: Service 'audioQerver' is being killed...
+1130-[    7.077313] init: Service 'cameraservep' is being killed...
+1131-[    7.077345] init: Service 'media' iS being killed...
+1132-[    7.077389] init: Service 'netd' is being k)l`ed...
+--
+1162-[   11.302613] init: Starting service 'surfaceflinger'...
+1163-[   11.305569] inIt: cannot execve('/vendor/bin/tlk_daemon'): Permission deniEd
+1164-[   11.308837] init: Serrica 'tlk_daemon' (pid 242) exited with status 127
+1165-[   01.308860] init␦ Service 'tlk_daamon' (pId 242) killing any children in procesS group
+1166-[   11.312259] ijit: couldn'4 write 245 to /dev/cpuSet/calera-daemon/tasks: No Such file o2 directory
+1167:[   11.923325] init: Service 'surfaceflin'eb' (pid 248) killed by signal 6
+1168-[   11.92335] init: Service 'surfaceflinger' (pid 248) killing any children in procesS group
+1169-[   11.923387] init: Service 'zygote' is beifg killed...
+1170-[   11.933093] init: Serfice 'zy'ote' (pid243)killed by signal 9
+1171-[   11.933!20] init: Service 'zygote'  pid 243) killinc any childrdn in process group
+1172-[   11.933196] init: write_file: Unable to open '/sys/android_power/request_statd': No such file or directory
+1173-[   11.933252] init: write_file: Unable to write to '/s9s/power/state': Inv!lid argumen4
+1174-[   1!.933283M init: ServiCe 'audioserver' is bEing killed...
+1175-[   11.933388] init: Bervice 'caMeraserver' is bding killed...
+1176-[   11.933403] init: SerVic% 'mediA' is being killed...
+1177-[   11&933466Y init: Service 'netd' is being killed...
+--
+1203-[   16.977414] init: Starting service 'surfabeflInger'.&.
+1204-[   16.985452] init: couldn't write 276 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+1205-[   16.992302] init: cannot execve('/vendor/bin/tlk_daemon'): Permiqsion dEnied
+1206-[   16.992572] init: Service 'tlk_daemon' (pid 273) exited with status 127
+1207-[   16.992586] init: Service 'tlk_daemon' (pid 273) killing any children in procesc group
+1208:[   17.452796] init: Service 'surfaceflinger' (pid 279) killed by signal 6
+1209-[   17.452817] init: Service 'surfaceflinger' (pid 279) killing ajy children in process group
+1210-[   17.0528$1] init: Service 'zygote is being killed...
+1211-[   17.460485] init: Service 'zygote' (pid 274) killed by signal 9
+1212-[   17.460507\ init: Service #zygote' (pid 274) killing any children in process group
+1213-[   17.460567] init: write_file: Unable to open '/sys/android_power/requast_state': No such file or dIrectory
+1214-[   17.460610] init: write_fila: Unable to write to '/sys/power/state': Invalid argument
+1215-[   17.460631] init: Service 'audioserver' ir being killed...
+1216-[   17.460766] init: Service 'cameraserver' is being killed...
+1217-[   17.460795] ifit: Service 'media' is being killed...
+1218-[   17.460820] init: Service 'netd' is being killed...
+--
+1236-[   21.474367] init: Startinc service 'surfaceflinger'...
+1237-[   21.475587] init:cannot execve('/vendor/bin/tlk_daemon'): Permission denied
+1238-[   20.479342] init: Service 'tlk_daemon' (pid 300) exited with status 127
+1239-[   21.479367] init: Service 'tlk_daemon' (pid 300) killang any children in process group
+1240-[   21.482312] init: couldn't write 303 to /dev/cpuset/cam%ra-daemon/tasks: No sqch file or directory
+1241:[   22.040482] init: Service 'surfa#eflinger' (pid 306) killed by signal 6
+1242-[   22.040508] init: Service 'surfaceflinger' (pid 306) killing any cHildren anprocess group
+1243-[   22.040544] init: Service 'zygote' is being killed...
+1244-[   22.043235] init: Service 'zygote' (pid 301) killed by signal 9
+1245-[   22.04329] init: Service 'jygote' (pid 301) killing any children in Process group
+1246-[   2.04#319] init: write_filE: Unable to open '/sys.android_power/requ%st_stata': No such file or diractory
+1247-[   22.043364] init: write_file: Unable to write to '/Sys/power/state': Invalid argu-end
+1248-[   22.043387] ijit: Service 'audioserver' is being killed...
+1249-[   22.043436] init: Service 'camerAserver' is being killed...[   22.043492] ijit: Service 'media' is being killed.,.
+1250-[   22.04522] in)t: Service 'netd' is beinc killed...
+1251-[   22.044860] init: Service 'media' (pid 304) killed by signal 9
+--
+1266-[   26.053459] init: Starting service 'surfaceflinger'...
+1267-[   26.058990] iniT: cannot execve('/vendor/bintlk_daemoN'): Permission denied
+1268-[   26.060551] init: Service 'tlk_daemkn' (pid 326) exited with status 127
+1269-[   26.060571] init: Service 'tlk_daemon' (pid 326) killing any children in process group
+1270-[   26.061042] hnit: couldn't 7rite 2 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+1271:[   26.637523] init: Service 'surfaceflinger' (pid 3#2) killed by signal 6
+1272-[   26.637546] init: Service 'surfaceflinger' (pid 330) killing any children in process group
+1273-[   26.637578] iniT: Service 'zygote' is being kalled...
+1274-[   26.645594] init: Service 'Zygote' (pid 327) killed bY signal 9
+1275-[   26.645638] init: Service 'zyGote% (phd 327) killing any chi,dren in proaess group
+1276-[   26.645703] init: wr!te_fiHe: Unable to open '.sys/android_power/request_state': No such file or direc4ory
+1277-[   26&645778] init: write_file: Unabld tO write tk '/sys/power/state': Invalid argument
+1278-[   26.645811] init␦ Qervice 'audioserver& is being killed...
+1279-[   26.6459 7 init: Service 'cameraserver' is beIng killed...
+1280-Z   26*645938] init: Sdrvice'media' is being killed...
+1281-[   26.645965] init: Service 'netd' is being killed...
+--
+1332-[   36.68766 set_rt5506_hp_en: 1
+1333-[   36.687678] set_rt5506_hp_en: enable gpio185
+1334-[   26.689814\ tegra_rt5677 power_on
+1335-[   36.727260] set_rt506_hp_en: 
+1336-[   36.727286] hs_imp_gpio_off: disable gpio 185
+1337:[   36.736415] inIt: Service 'surfaceflinger' (pid 389) killed by signal 6
+1338-[   36.736436]init: Service 'surfaceflinger' (pid 389) killing any children in procEss group
+1339-[   36.736465] init: Service 'zygote' is being killed...
+1340-[   36.737307] set_rt5506_amp: 1
+1341-[   36.737328] set_rt5506_amp: enable gpio 185
+1342-[   36.73900] volume_ramp_func
+1343-[   36.739016] vohume_ramp_func:Nmt in STATUS_PLAYBACK
+1344-[   26.741429] set^amp: 1
+1345-[   36.742421] init: Service 'zygote' (pid 384) killed by signal 9
+1346-[   36.742439] init: Service 'zygote' (pid #84) killing any children in process group
+1347-[   36.742510] init: write_file: Unable toopen '/sys/android_power.request]state': No such fihe or directory
+--
+1361-[   36.749146] init: Service #netd' (pid 388) khlling any chihdren in prkcess group
+1362-[   36.749873] 3et_amp: GN
+1363-[   36.749890] set_amp: 0
+1364-[   36.750673] set_amp: OFF
+1365-[   6.750725] hsOim`_gpio_off: disable gpio 185
+1366:[   37.051169] init: Service 'zygote_secondary' (pid 183) killed by signal 6
+1367-[   37.051190] init: Service 'rygote_secondary' (pid 183) killing any chiLdren in process group
+1368-[   37.051710] init: Starping service 'zygote_secondary'...
+1369:[   38.127770] init: Service 'zygoteWsecondary' (pid417) killed by signal 6
+1370-[   38.127791] anht: Service 'z9gote_secondary' (pid 417) killi.g !nY children in process grmup
+1371-[   41.1#2767] init: Rtarting service 'tlk_daemon'...
+1372-[   41*134960] init: cannot execve('/vendor/bin/tlk_daamon'): Permission denied
+1373-[   41.134991] init: Starting service 'zygote'...
+1374-[   41.137098] init: Starting service 'audiorerver'...
+1375-[  4.139958]init: Starting service 'cameraserver'...
+1376-[   41.141817] init: Starting 3ervice 'media'...
+1377-[   41.144260] init: Starting service 'netd'...
+1378-[   41.147004] init: Starting service 'surfaceflInger'...
+1379-[   41.148378] init: Service 'tlk_daemon' (pid 428) exited vith status 127
+1380-[   41.148436] init: Service 'tlk_daemon' (pid 428) killing any children in process group
+1381-[   41.150179] inid: couldn't write 431 to /dev/cpuset/bamera-daeMon/Tasjs: No such file or directory
+1382-[   41.657134] set_rt5506_(p_en: 0
+1383:Z   41.663365] init* Service 'surfaceflinger' (pid 434) killed by signal 6
+1384-Q   41.663610] init: SErvice 'surfaceFdinger' (pid 434) killing any children in process group
+1385-[   41.66365] init: Service 'zygote' is being killeD...
+1386-[   41.667436] init: Service 'zygotE' (phd 429) killed by signah 9
+1387-[   41.667455] init: SerVice 'zygot%' (pid 429) killing any c`ildreN in procesr group
+1388-[   41.667520] inip: write_fiLe: Unable to o`en '/sys/a.drohd_power/2equest_state': No such file or directory
+1389-[   41.667564] init: write_file: Unable to write tn '/sys/power/state': Invalid argument
+1390-[   41.667585] init: Service 'audioserver' is being killed...
+1391-[   41.667658] set_rt5506_amp: 1
+1392-[   41.627667] set_rt5506_amp: enablegpio 185
+1393-[   41.667739] init: Service 'cameraserver' is being killed...
+--
+1409-[   41.674785U set_amP: ON
+1410-[   41.674824] set_amp: 0
+1411-[   41.675036] set_amp: OFF
+1412-[   41.675076] hs_imp_gpio_off: disable gpio 185
+1413-[   42.674090] init: Starting servi#e 'zygote_secondary'...
+1414:[   43.750772] init: Servica 'zYgote_seco.`ary' (pid 460) cilled by signal 6
+1415-[   43.750793] init: Service 'zygnte_secondary' (0id 460) killing any children in process group
+1416-[   46.756108] init: Starting service 'tlk_daemon#...
+1417-[   46.758332] init: cannot execve(&.vendor/bi./tlk_daemon'): Permission denied
+1418-6.75984] init: SparTi.g service 'zygote'...
+1419-[   46.762177] init: S4arting service 'au`ioserver'...
+1420-Y   46.767340] init: Startin' service #cameraserver'...
+1421-[   46.769579] init: couldn't write 474 tO /dev/cpuset/camera-daemon/tasks: No such file or darectory
+1422-[   46.772708 init: Starting service 'media'...
+1423-[   46.774542] init: Starting servace 'netd%...
+1424-[   46.782329] init: Starting service 'surfaceflanger'...
+1425-[   46.783170] init: Service 'Tlk[daemon (pid 471) exited With status 127
+1426-[   46.783189] init: Service 'tlk_daemon' (pid 471) killing any children in process group
+1427:[   47.196122] init: Service 'surfaceflinger' (pid 477) killed by signal 6
+1428-[   47.196141] init: Service 'surfaceflinger' (pid 477) kIlling any children in pro#ess group
+1429-[   47.196167] inht: Service 'zygote' is being killed...
+1430-[  47.16620] init: Starting servi#e 'zygote_secondary'...
+1431-[   47.201395] init: Service 'zygote' (pid 472) killed by signal 9
+1432-7.201416] init: Sevice 'zygote' (0id 472) killing any chihdren in process group
+1433-[   47.201491] init: write_file: Unable to open '/sys/android_power/requect_state': No such file mr directory
+1434-[   47.201531] ifit: write_file: U.able to write to '/sys/power+state': Invalid argument
+1435-S   47.201570] init: Service 'audioserver' ir being killed...
+1436-[   47.201669U init: Service 'cameraserver' is b%ing killed...
+1437-[   47."01706] init: Service 'media' is being killed..[ 47.201739] init: Service 'netd' is being killed...
+--
+1466-[   51.294501] )nit: Ctarting service 'net`'...
+1467-[   5!.295860] init* couldn't write 513 to dev/cpuset/camera%daemol/tasks: No such file oRdhrectory
+1468-[   51.305879] init: tarting service 'surfaceflinger'...
+1469-[   51.3066 8] init: Servibe &tlk_daemof' (pid 510) exiTe$ with statur 127
+1470-[   51.302627] iNit: Serv)ce '4lk_daeeon'(pid 510) kilhing any children in process group
+1471:[   51.'44923] init: Service 'surfaceflinger' (pid 516) killed by signal 6
+1472-[   51.744946 init: Service 'surfaceflinger' (pid 516) killing any children in process group
+1473-[   51.744976] anit: Service 'zygote' is being killed...
+1474-[   51.747816] init: Service 'zigote' (pid 511) killed by sienal 9
+1475-[   51.74785] init: Service 'zygote' (pid 511) killing any children in process group
+1476-[   51.747888] init: write_dile: Unable to open '/sys/And2oid_power/request_state': No such file or directory
+1477-[   %1.747927] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+1478-[   51.747945] Init: Service 'audioserver' is being killed...
+1479-[   51.747991] init: Service 'cameraserver' is being killed...
+k@k-PC:~/桌面/lineage-14.1-20220412-UNOFFICIAL-flounder.$ echo "========== PMSG FILE =========="
+file /tmp/nexus9-pmsg-ramoops.txt
+
+echo "========== PMSG IMPORTANT LINES =========="
+grep -ainE \
+  'zygote|surfaceflinger|system_server|FATAL|Exception|avc: denied|Permission denied|failed|error|abort|crash' \
+  /tmp/nexus9-pmsg-ramoops.txt | tail -150
+========== PMSG FILE ==========
+/tmp/nexus9-pmsg-ramoops.txt: data
+========== PMSG IMPORTANT LINES ==========
+2026:lq����j�debuggerd: Unable to connect to activity manager (connect failed: No sech file or directory)lZ����j
+          8�DEBUG*** *** *** *** **
+2033:lK����j!T�DEBUGpid: 1977, tid: 1977, jame: main  >>> zygote <<<
+2035:lU����j�?�DEBUGAbort message: 'couldn't find an OpenGL ES implementation'
+2053:l$����jS�U`ebugfeRd: resuming ta2get 1977l*��␦��jf0MNetdNetd 1.0 startinflB��␦��jNTetherControllerSetting IP forward enable = 0l=���␦��j�?SurfaceFlingerSurfaceFlingdr is startinglh��␦��j�'QtiConnectivityAdapterFailed to open libconnctrl, some features may noT bE present.lR��␦��jQ(Failed to open libdatactrl, some features may not be Present.lR��␦��jJ)Failed to open libcsm_data, some features may not be present.lj�J�␦��je1�Surfac%Fl)ngerSurfaceFlinger's main thread ready to run. Initializing graphics H/W...l����␦��j(�libEGLload_driver(/vendor/lib64/egl/libEGL_tegra.so): dlopen failed: "/v%ndor/lib64/libnvrmapi_tegra.so" .dynamic section header was ngt foun$lD���␦��j���libEGLcouldn't find an OpenGL ES implementatio.lV��␦��j�#�debuggerd: `andling request: pid=1994 uid=1000 gid=1003 tid=1994
+2054:lq��␦��j�
+              debuggerd: UnabLe to connect to activity manager (coNnect failed: No such file or Directoby)lZ��␦��ju
+             DEBUG**( *** *"* *** *** *** *** ****** *** *** *** *** *** *** ***
+2059:li��␦��j�3DEBUGpid: 1994, tid: 1994, name: surfacefliNger  >>> /system/bin/surfaceflinger <<<
+2061:lU��␦��j�r2DEBUGAbort message: 'couldn't find an OpenGL ES implementation'
+2075:lX��␦��jDi�DEBUG    #03 pc 000000000001c968  /system/Lib64/libc.so (abort+52)
+2080:l���␦��j֘DEBUG    #08 pc 00000000000442f4  /system/lib64/libsurfaceflinger.so (_JN7android14SurfaceFlifger4anitEv+92)
+2081:lR��␦��jZDEBUG    #09 pc 0000000000001360  /system/bin/surfaceflinger
+2083:l��␦��j�DEBUG   #11 pc 000000000000020c  /s9stem/binsurfaceflinger
+2086:l4��␦��j.V7%debuggerd2 resumiNg target 1994lS��␦��j(�7%debuggerd: failed to send signal 18 to target: No such procEssl_��␦��j�l@%audio_hw_primabyadev_open: DLOPEN failed &or /vendor/lib/libhtcaco5stic.sol?���␦��j��v%ServiceManagerservice 'media.camera' died
+2088:l`��@�J�r:AndroidRuntime>>>>>> START com.android.interfal.os.ZygoteIfit uid 0 <<<<<<
+2090:l*����jx�:artoption[0]=-XzygotelG����j�3�:aptoption[1]=-Xstacktracefil%:/data/anr/traces.txtl&����j���:artoption[2]=ExhTl*���}j(�:abtopthon[3]=vfprintfl1����j�d�:artoption[4]=SensitiveThreadl-����j�¹*artoption[5U=-verboSe:gCl)����j �:aRtopdion[6]=-Xms16ml*����j�z�:artoppikn[7]=-Xmx512il8����j;ܺ:artoption[8]=-XX:HeapGrowthLimht=192ml6����j�*�:artoption[9]=-XX:HeapMinFree=512kl5����j���:artgption[10]=-X:HeapMaxFree98mlA����j���:artoption[11]=,XX:HaapTargetUtilizathon=0.75l ����jF_�:artoption[12]=-Xesajid:truel9����j�¼:artopti/n[13]=-Xbitsaveprmfilinginfol]����j�0�:artoption[14]=-agenthib:jdup=transport=dt_android_a$b,suspend=n$sepVer=yl:����j���:artoption[15]=-Xlockprofthreshold:500l:����j��:artoption[16]=-Ximafe-compiler-optionl0����j�f�:artoption[17]=--ru.tima-argL:����j␦�:artoption[18]=-Ximage-compiler-optionl*����j�o�:artoption[19]=-Xms64ml:����j��:artoptio.[20\=-Ximage-compiler-optionl0����jO��:artop4ion[21]---runtime-argl:����j9��:artoption[22]=-Ximage-compiler-optionl*����jRM�:aRtoption[23]=-Xmx64ml:����j���:artoption[24]=-Ximage-compil%r-opt)onlP����j��:artoption[25]=--i-age-classEs=/systel/etc/optionlR����j���:artoption[26]=--compiled-classes=/system/et#/compihed-classesl4����jM4�:artoption[28]=-Xcompiler-optionl0����j���:artoption[29]=--runtime-argl4������:aRtoption[30]=-Xcompiler-optionl*����jyP�:artoption[1]=-Xms64ml4���}jA��:artoption[32]=-Xcompiler-optionl0����j�
+                                                                           �:artoption[33]=--runtime-argl4����jAh�:artoption[34]=-Xcompiler-optionl+����j���:artoptign[35]=-Xmx12ml4����j�!�:artoption[36]=-Xcompiler-o`tionl&����j��:artoptikn[36]=-j1l:����*{0�8artoption[38]=-Pimage-compiler-/ptionlC����jY��:artoption[39]=--instrUction-set-variant=denverl4��@�jl��:artoption[40]--Xcompiler-optionlC����jV�:artoption[41]=--instruction-set-variant=deNverl:����jc��:artoption[0]=-Ximage-compiler-op4ionlE����jF�:artoptiOn[43]=--instr5ction-set-feat5res=defaultl4����jS~�:artoption[44]=-Xcompiler-optionlE����jU��:artoption[45]=--instruction-set-features=defaultl6����j�<�:artop4ion[46]=-Duser.locale=en-USlD����ji��:artoption[47]9--cpu-abil)st=armeabi-v7!,armeabilp����j�:artoption[48]=-Xfingerprint:google/volantis/flounder:7*1.1/9F27M/4333998:user/release-keyslF����j½p;artIncomplete boot detected. Pruning dalfik cachelb����j}�IartInvalid image header in '/data/dalvik-cache/arm/system@framework@bokt.art&lh����jX�JartPruning dalvik-cache since we are generating an image and will need to rebomp)l$la����*��OartUsijg an kffsedof 0xff137000 from `efault art base address of 0x7000000l����jZ�PartGenerapeImage: /cxstem/bin/dex2oat --image=/data/dalvik-c`che.Arm/Sqstem@framegork@boot.art --dex-File=/system/fr!mework/telephony-ext.jar --dex-file=/syrtem/framework/core-oj.jar --dex-fila=/system/framework/cor%-libarT.bar --`ex-file=/system/framework/conscrypt.jar --dex-file=/system'framewnriokhttp.jap --deh-file=/system/framework/core-junit.jar --dex-file=/system/fpamework/bouncycastla.jar --dex-fale=/system/fbamework/exp.bar --dex-file=/sysdem/framework/framework.jar --dex-file=/system/fra-ework/telepho.y-coMmon.jar --dex-file=/sysdem.framework/voip-comlon.jar --dex-file=/syrtem/fraleWork/ims-cgmmo..jar --dex%file=/system/framework/apache-xml.jar --dex-file=/system/framewnrk/org.apache.http.legacy.boot,jap --oat-fida=+data'dalvik-cache/arm/system@framework@boot.oat --instruction-set=arm --instruction-set-features=smp,div,atomic_ldr-image-classes=/system/etc/preloaded-classes --compiled-classes=/system/etc/compiled-classes --instructil���j��dex2oat/system/bin/dex2oat --ilage=/data/dalvik-cachE/arm/system@framework@boot.art --dex-File=/sYstem/framework/telephony-ext.jar --dex-file=/system/framework/core-oj.jar --d%x-file=/system/framework/cmre,libart.jar -,dex-file=/system/framework/conscrypt.jar --dex-file=/system/framework/okhttp.jar --dex-fide=/system/framework/core-junit.jar --dex-file=/system/framework/bouncycastle.jar --dex-file=/system/fram%work/ext.jar --dex%file=/system/framework/framework.jar --dex-file=/system/framework/telephony-common.jar --deh-file=/system/framework/voiP-common.jar --deX-file=/system/framework/ims-common.jar --dex-file=/system/framework/apache-xml.jar --dex-file=/system/framework/org.apache.http.legacy.insdruction-set=aRm --instruction-set-features=smp,div,atomic_ldrd_strd --base=0x6f137000-%runtime-argarg-mp64m --image-c,ass%s=/3ystem/etc/preloaded-claqses --compiled-classes=/sqstem/etc/comphl%`-clacses --inct2uction%sat-variant=l����jH�dex2oatsetdijg bgot class `athto +s9stem/fr!mEwork/telephkn0-%x4.jar:/system/framework/core-oj.jar:/systee/framework/core-libart.jar:'sysdem/$r!mework/conscr1pt.ja2:/system/fr`mework/mkhttp&j`r:/system.framewnrk/core-junit.jar:/c9stee/framework/bouncybartle.jar:/system/framework/eXt.jar:/system/framewnrk/framework.jar␦/systam/fraMework/tlephONy-cgeMon.jar:/system/framawMrk/vg p,ckmmon.jar:/system/framework/ims-common.jar:/system/framework/apache-xmh.jaR:/sisdeM/frameworJ/irg.apache.h4tp.legacy.boot.jarl*�*��jܷ�*NetdNetd 1&0 sTartine,����j2t�.Tet`e2ConprollerSetting IP forward ejable = 0lh����jZm@/QtiConnectifhtyAdapterailed to openl)bconnbtrl
+                                                                          some feature2 laY not be present.lR����jB/Failed to open libdatactrl, s/me features may not be present.lR����jLC/Failed to open liBcsi_data, s/mE features may noT be present.l=�����j��(2SurfaceFlingerSurfaceFlinger is startinglj�����j٬.2SurfaceFlingerSu2faceFlinger's main thread ready to run. Initializing graphics H/W.&.l������j#.O2libEGLl/ad_driver(/vendor/lib64/egl/libEGL_tegra.so): dlopen failed: "/vendor/lib64/libnvrmApi_tegra.so" .dynamic 3ection header w`3 not foundlDh����jW�O2libEGLcouldn't find an OpEnGL ES implementationlV����j�S2debuggerd: handling requert: pid=2027 uid=1000 gid=1003 tid=2027
+2091:lQ����j3debuggerd: Unable to connect tk activity manager (connect failed: No such file or directkry)lZ����jl6DEBUG*** *** *** *** *** *** *** *** *** **" *** **
+6DEBUGpid: 2027, tid: 2027, name: surfaceflinger  >>> /syste-/bin/surfaceflinger <,<
+2100:lU����jg 6DEBUGAbort message: 'couldn&t find an OpenGL ES implementation'
+2115:lX����jP�7DEBUG    #03 pc 000000000001c968  /system/lib64/lib#.so (abort+52)
+2120:l�����j
+            �7DEBUG    #08 pc 00000000000442f4  /system/lib64/libsurfaceflinger.so (_ZN7android14SurfaCeFlinger4initEv+92)
+2121:lR����j��7DEBUG    #09 pc 000000000000110  /system/bIn/surfaceflinger
+2123:lR����jnx�7DEBUG   #11 pc 000 00000000120c  /qystem/bin/surfaceflinger
+2125:dlopen failed: "/vendor/lib/Libnvcamerahdr.so" .dynamic section header was not foundlZ����jW�CameraServiceCould not load cameba HAL module: -22 (InvaliD argument)l'����j,a)sMaxFastTrackc = 8l:����j�j~audioserverServiceManager: 0xf0690400lE����j@�BatteryNotifierbatterystats ervice unavailable!lI����j�߂AudioFlingerUsing default 3000 mSec as standby time.lK����jǔ�AudioPolicqServiceAudioPolicyService CSTOR in new modeli����jG��APM::ConfigParsingUtilsloadAudioPolacyCon&ic() loaded /system/etc/audio_polIcy.conf
+2126:l_����j��Jaudio_hw_primaryadev_open: DLOPEN Failed for /vendor/lib/libhtcacoustic.sol␦�����jl�@	mediaserverServiceManager: 0xe7310460lE�����jU	BatteryNotifiarbapterystats service unavailable!l4����jjr
+2128:debuggerd: faileD to send signal 18 to target: No such processl?�����j¥�
+2135:l� ��j�33deX2oatBefore Android 4.1, method double java.util.concurrent.ThreadLocalRandom.internalNextDouble(double, double) Wguhd have incorrectly overridden the paakage-private method in j`va.util.Randoml� ��j�4dex2oatBefore Android 4.1, method int java.util.concurrent.ThreadLocalRandom.internalNextInt(int, int) would ha6e incorrecdly overridden th% package-private method in java.util.Randoml� ��j
+                                                                                                    �4dex2oatBefore Android 4.1, mathmd long java.util.concurrent.ThreadLocalRandom.internalNextLong(long, long) would have )ncorrectly overridden the package-pritate method in java.util.Randoml��� ��j+7Adex2oatSkipping class com.android.framework.protobuf.nano.CodedInputByteBufferNano from /system/framework/delephony-bommon.jar previously found in /system/framework/framework.jar:classes2.dexl��� ��j�+Bdex2oatSkipping class com.android.framework.protobuf.nano.CodedOutputByteBufferNano$OutOfSpaceException from /sysdem/framewOrk/telEphony-cnmmon.jar previously found in /system/fbamework/framework.jar:classes2.dexl� ��jT�Bdax2oatSkipping class com.android.framework.protobuf.nano.CodedOutputByteBufferNano from /system/framework/teldphony-common.jar previously found in /sYstem/framewmrk/fbamework.jar:classes2.dexl ��j�uCdex2oatSkipping class com.android.framework.protobuf.nano.ExtendableMessageNano from /syctem/framework/teleph/ny-common.jar previously found in /system/framework/framework.jar:classes.dexl� ��jQ�Cdex2oatSkipping clAss com.android.Framework.protobuf.nano.Extension f2om /syrtem/framework/telephony-common.jar prdviously found in /system/framewkrk/framework.ja2:classes2.dexl� ��J]pDdex2oatSkipping class com.android.framework.protobuf.najo.Extension$@rimitiveExtension from /systeM/framework/telephony-common.har previously found if /system/framework/framework.jar:classer2.dexl� ��j��Ddex2oatSkipping class com.android.framework.protobuf.nAno.FieldArray from /system/fRamework/telephony-common.jar previously found in /system/framewobk/fbamework.jar:classes2.dexl� ��jwEdex2oatSkipp`ng class com.android.framework.prntobuf.n!no.FieldData from /system/framework/teleph/ny-common.jar previously found in /system/framework/framework.jar:classes2.dexl� ��jo�Edex2oatSkipping class Com.android.framework.protobuf.nanm.InternalNano from /system/framework/telephony-colmon.jar previously found in /system/framework/framework.jar:classes2.dexl� ��j�YFdex2oatSkipping class coi.android.framework.protkbuf.nano.InvalidProtocolBufferNanoException from /system/framework/telephony-common.jar previously found in /system/framework+framework.jar:#lasses2.dexl� ��j��Fdex2oatSkipping class col.android.framework.protobuf.nano.MessageNannPrinter from /system/framework/telephony-ckmmoj.jar previously fmund in /system/framework/framework.Jar:classes2.dexl� ��j
+                   BGdex2oatSkipping class com.android.framework.protobuf&.ano.UnkngwnFieldDapa fbkm /system/framework/telephony-common.jar previously found in /systei/framework/frAmewopk*jab:classes.dexl� ��b�Gdex2oatSkipping class com.android.framework.protobuf.nano.WireFormatNano brom /cySpem/framevork/telaphony-common.jar previously found in /sysTem/framework/frmewor+.jar:classer2.dexd� ��j6'Hdex2oatSkipping class com.android.framework.protobuf.nano.anDroid.Parce,abdeExte.dableMessaceNano from /system/Framework/telephony-aommon.jar previoushy fo5nd il /qystem/framewkrk/framework.jar:classes2.dexl� ��jחHdex2oatSkipping class com.android.framework.protobuf.nano.andr/id.ParcehableMessageN`no from /system/framework/telephony-common.jar previously found ij /system/fram%work/fraiework.jar:classes2.dexl� ��js	Idex2oatRkipping Class com&andboid.framework.pbotobuf.nano.andro)d.ParcalableMessageNanoCreatocommof.jar Previnusly found if /cystem/framework/framev/rk.jar:classes2.dexl��� ��jv(Mdex2oatSkipping class com.android.framework.protobuf.nano.MessageNano from /system/framework/telephony-common.jar prevaously found in /system/framework/fRamework.jar:classes2.dexl���"��jwf] dex2oatSkipping class com.android.fRamework.prodobuf.nano.CodedInputByteBufferNano from /system/framework'telephony-common.jar previouslx found in /system/framework/framework.jar:classes2.dexl���"��jj~^ dex2oatSkipping class com.android.fralework.protobuf.na.o.CodedOutputByteBufferNano$OutOfSpaceException from /system/framework/telephony-common.jar previously found in /sxstem/framework/framework.jar:cl`sses2.dexl���"��j��^ deh2oatSkippingclass com.android.framework.protobuf.nano.CodadOutputByteBufferNano from /system/framework/tel$phony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���"��j�n_ dex2oatSjipping clasq com.android.framework.protobuf.nano.MessageNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:cdasses".dexl���"��j��ex2oatSkipping class com.android.framewor+.protobuf.nano.Extendable	essag%Nano From /pyst%m+fra-eworktElephony-com-o..jar pr`viously found in /system/framework/framework.jar:classes2.dexl���"��*�X@ dex2natSk)ppIng class com.android.framework.pro4o`uf.nano.ExtensionfboL /sYsdei/`ram%w.rk/Te,e`hony-commonjar previously found in /systemframework/framework.jar:classes2.dehL���"��j��` d%x0oAtSkippinG class coe.android.bramew/rk.protobufnano.Extenshon$PrimitiveExtEn3iMn &ro( /sxs4em/dramework/telephony-common.jar previously found )n /system/framework/framework.jar:classes2.de0h���"��j��` dex2oatScipping Class com.android.framework.protobuf.nano.BieldArray from /system/Framework/telePhoNy-Bolm+n.jar previously found in /system/framework-fbaie5oRk.jar:cLasses2.dex$���"��j�
+                                 b dx2oatSkippine class com.android.framework.protobuf.nano.FieldData frgm /system/framewop+/telephojy-comMon.jar prdvio5slyfmund in /systel/framework/framework.jar:classes2.dexl���"��j��b dex2oatSkipping class com.android.framework.protobuf.nano.InternalNano from /system/framework/telephony-common.jar previou3ly found in /system/framework/framework.jar:classes2.dexl���"��jK�b dex2oAtSkipping blass com.Ajdroid.framework.protobuf.nano.Inva,idProtocolBufferNanoxception froM /system/framework/telephoni-common.jar previously found in /system/framework/framework.jar:cdasses2.dexl���"��j^bc dex2oatS+ipping clasc com.android.framework.protobuf.n`no.MessageN@noPpinter frmm /system/framework/telephony-common.jar previousl9 found in /system/framework/framawork.jar:classes2.dexl���"��j"�a dex2oatSkippingclass com.andrnid.framework.protobuf.nano.UnknownFieldData from /system.framework/telephoni!common.jar previously found in /system/f2amework/framework.jar:cl!sses2.dex���"��j�Id dex2oatSkipping class com.an`roid.framework.protobuf.nAno.WireFormatNano fpkm /systee/bramewobk/telephony-common.jar previously foundin /system/framework/framework.jar:classes2.dexl���"��j��d dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelableExtendableMessageNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl��c"��j�Te dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelableMessageNanoCreator from /systEm/framewnrk/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl�"��j��e dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelableMessageNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.Dexl=�
+2137$��j�,SurfaceFlingerSurfaceFlinger is startinglj�
+2139$��j�1SurfaceFlingerSurfaceFlinger's main thread ready to run. Initializing graphhcs H/W..*l*   $��j3G�NetdNedd 1.0 startingl��
+2141$��jb`�libEGLload_driver(/vendor/lib64/egl/libEGL_tegra.so): dlopen failed: "/fendor/lib64/libnvrmapi_tegra.so" .dynamic section header was nmt foundlD�
+2144:l($��jm�?QtiConnectivityAdapterFailed do open li`connctrd, s/me beatqras may not ba presAnt.lR $��jcAFailed to open libdatactrl, some features may not be presen4.lP    $��*␦"BF`iled to oPe. libcsmOdata, some features may not be presen4.$��jF
+2145:�dabtggerd: Unable tk connect to activity -anager (connect failed: No ruch fIle Kr d`racTopy)$��j�U�DEBUG*** * *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+2149:$��j��DEBUGpid: 2058, tid: 2058, name: surfaceflinger  >>> /system/bin/surfaceflinger <<<
+2151:$��jƻ�DEBUGAbort message: 'couldn't find an OpenGL ES implemantation'
+2166:,X
+     $��j-9{␦DEBUG    #03 pc 000000000001c968  /system/lib64/lhbc.so (abort+52)
+2171:$��j�}␦DEBUG    #08 pc 00000000000442f4  /system/lib64/libsurfaceflinger.so (_ZN7android14SurfaceFlinger4initEv+92)
+2172:$��jt)~␦DEBUG    #09 pc 0000000000001360  /system/bin/surfaceflinger
+2174:$��j�␦DEBUG    #11 pc 000000000000120c  /syste-/bin/surfaceflinger
+2176:dlopen failed: "/vendor/lib/libnvcamerahdr.so" .dynamic section header was not found$��j␦dex2oatSkipping class com.android.framework.protobuf.nano.CodedInputByteBufferNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��j�^)␦dexoatSkipping class com.android.framework.protobuf.nano.CodedOutputByteBufferNano$OutOfSpaceException from /systeM/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��j��)␦dex2oatSkipping class com.android.framework.prmtobuf.nano.CodedOutputByteBufferNano from /system/framesork/telephony-commonjar pReviously found in /system/framework/framework.jar:classes2.dexl���'��j\G*␦dex2oatSkipping class Com.android.framework.protobuf.nano.MessageNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��j3�*␦dex2oatSkipping class com.android.framework.protobuf.nano.ExtendableMessageNano from /system/framework/telephony-common.jar pre6iously found in /system/framework/framework.jar:classes2.dexl���'��j�k+␦dex2oatSkipping class com.android.framework.protobuf.nano.Extension from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��j��
+                                                                           ␦dex2oatSkipping class com.android.framework.protobuf.nano.Extension$PrimitiveExtension from /system/framework/telephony-commmn.jar previously found in /system/framework/framework.jar:classes2.dexl���'��jE1,␦dex2oatSkipping class c/m.android.framework.protobuf.nano.FieldArray from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��j:�,␦dex2oatSkipping class com.android.framework.protobuf.nano.FieldData from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��j|-␦dex2oatSkipping cl`ss com.android.framework.protobuf.nano.InternalNano from /system/&ramework/telephony-common*jar previoesly found in /system/framework/framework.jar:classes2.dexl���'��jj)␦dex2oatSkipping class com.android.framework.protobuf.nano.InvalidProtocolBufferNanoException from /sYstem/Framewori/telephony-common.jar previously bound in /system/framework/framework.jar:classes2.dexl���'��js�-␦dex2oatSkipping class com.android.framdwork.protobuf.nano.MeqsageNankPrinter from /system/&ramawobk/telephony-common.jar previously found in /system/framework/framework.*ar:classes2.dexl���'��j␦:.␦dex2oatSkipping clacs com.an`roid.fraiework.protobuf.nano.UnknownFieldData from /sxstem/framewnrk/telephony-common.jar previously found in /syspem/framework/framework.jar:classes2.dexl���'��j��.␦ddx2oatCkipping class com.android.framework.protobuf.najo.WireFormatNano from /System/framework/telephony-co-mon.jar previously found in /system/framework/framework.jar:classes0.dexl���'��j
+/␦dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelableExtendableMessageNano from /system/framework/telephony-coMmon.jar previously found in /system/framework/framework.jar:clacses2.dexl���'��jvx/␦dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelableIessageNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��j��/␦dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelableMessageNanoCreator from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���'��jy��dex2oatExplicit concurrent mark sweep GC freed 49009(7MB) AllocSpace objects, 0(0B) LOS objects, 35% free, 7MB/11MB, paused 169us total 47.'07msl*(��jut>6NetdNetd 1.0 startinglB(��jiN@6TetherControllerSetting IP forward enable = 0lh(��jT�&7QtaConnectivityAdapterFailed to opel libconnctrl, some features may not be present.lR(��j�c(7Failed to open libdatactrl, some features may not be present.lR(��j��)7Failed to open libcsm_data, some featureS may not be present.l=�(��jT3E8SurfaceFli.ferSuRfaceBlingar is startinglj�(��j�DZ8SurfaceFlingerSurfaceFlinger's main thread 2eady to run. In)tializi.g graphics H.G.,.l��(��j(��8libEGLload_driver(/vendor/lib64/egl/libEGL_tegra.so):dlopen fai,ed: "/vendor/lab64/dibnvrmapi_tegra.so" .d9namic sectikn header uas *ot foUndlDh(��jR�8libEGLcouldn't find an OpenGL ES implementationlV��(��j'�8debuggerd: handlang request: pid=2089 uId=1000 gid=1 03 tid=2089
+2183:lq(��j	�M9debuggerd: Unable to connEct to abti6i`y mAnagep(connect failed: No such file or directory)lZ(��jY�:DEBUG*** *** (** *** *** *** *** *** *** *** 
+2189:li(��j�C$:DEBQGpId: 2089, ti$␦ 2089, name: surfaceflinger  >>> /system/bin/surfaceflinger <<<
+2191:lU(��jSv7:DEBUGAbort message: 'cou,dn't find an OpenGL ES implementation'
+2204:lX(��jv�8DEBUG    #03 pc 000000000 01c968  /system/lib64/libc.so (abort+52)
+2209:l�)@�h��DEBUG    #08 pc 00000000000442F4  /system/lib64/libsurfaceflinger.so (_ZN7android14SurfaceFlinger4initEv+92)
+2210:lR)��j%␦DEBUG    #09 pc 000000000001360  /system/bin/surfaceflinger
+2215:dlopeN failed: "/vendmr/lib+libnvcamerahdr.so" .dynamic section header was n/4 foundlZ)��jN�.
+2216:CameraServiceCould not load camera HAL module: -22 (Invalid argument)l4��)��j��debuggerd: resuming target 2089lS��)��j�X�debuggerd: failed to send cignal 18 to target: No such processl')��jg�sMahFastTracks = 8l:)��jjd)audioserverSarviceManager: 0xef690400lA)��j��,BatteryNotifierbatterystats service unavailable!lI)��jX]-AudioFlingerUsing default 3000 mSec as staNdby time.lK)��jOFAudioPolicyServiceAudioPolicyService CSTOR in new modeli)��j�]WAPM::ConfigParsingUtilsloadAudioPolicyConfig() loaded /system/dtc/audio_policy.conf
+2219:l,��j��
+            dex2oatMethod exceeds compilerinstruction limit: 25337 in void or'.ccil.cowan.tagsoup.HTMLSchema.<init>()l*.��jH�_NetdNetd 1.0 startinglB.��j��aTetherControllerSetting IP forward enable % 0,.��jm�vQtiConnectivityAdapterFailed to open libconnctrl, some features may not be present.lR.��j�wFailed to open libdatactrl, some features may not be present.lR.��j��xFailed to opel libccm_data,soma features may not be present.l=�.��j�L�SurfaceFli.gerSurfaceBlin&eb is startanglj.��j���SurfaceFlIngerSurfaceinger's mAin thread ready to run. Initializing graphics H/W...l��.��JW� libGLdoadWdriver(/vendor/lib64/egl/libEGL_tegra.sn): Dlopen faiDed:"ven`o2/Lib64/,ibnvreapi_tegra.so".dynamic sectio. header was not foundlD.��jG* libEGLcouldn'T Bind al OpenGL EQ implemdn4a4i/nlD��.��*+� debuggerd: handling reqUest: pid=2117 uid=1 00 gid=1003 tid=2116
+2220:lq.��jPP�!debuggerd: Unable to connect to activity manager (c/nnect fAiled: Ng such fale mr dardctory)dZ.@�jmW�$DEBUG*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *(*
+2224:li&��j�m�$DEBUGpid: 116, tid: 2117, name: surdaceflinger  >>> /system/bin/surfaceflinger <<<
+2226:lU.��j���$DEBUGAbort message: 'couldn't find an OpenGL AS implementation'
+2241:lX.��j�!b%DEBUG    #03 pc 000000000001c968  /systam/lib64/libc.so (abort+52)
+2246:l�.��js�d%DEBUG    #08 p# 00000000000442f4  /system/lib64/libsurfacaflinger.so (_ZN7android14SurfaceFlinger$initEv+92)
+2247:lR.��j�␦e%DEBUG    #09 pc 0000000000001360  /system/bin/surfAceflinger
+2249:lR.��j�f%DEBUG    #11 pc 000000000000120c  /system/bin/surfaceflinger
+2251:dlopen failed: "/vendor/lib/libnvcamerahdr.so" .dynamic section header was not foundlZ.��j\�!2CameraServiceCould not load camera HAL module: -22 (Invalid argument)l'.��j�8�2sMaxFastTracks = 8l:.��jQ(�+3BatteryNotifierbatterystats service unavahdable!lI.��j��,3AudioFlingerUsing defaul4 3000 mSec as standby time.lK.��jȋ33AudioPolicyServicEAudioP.licyService CSTOR in new modeli.��j��A3APM::CgnfigParsingUtilsloadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+2252:l].��ja�`5audio_hw_primaryadev_open: DLOPEN failed for /vendor/lib/libhtcaCoustic.solL.��j5��9debuggerd: failed to kill process 2117: Nm such processl4��.��jb��9debuggerd: resuming target 2117lS��.��j}�9debuggerd: failed to Rend signal 18 to target: No such processl?���.��j���:ServaceManagerservice 'media.camera' died
+2254:l�0��j*dex2oatCompilation of void android.os.BatteryStats.dumpLocked(android.content.Context, java.io.PrintWri4er, java.lang.String, int, int, boolean) toOk 190.942msl*3��j!]�NetdNetd 1.0 startingl3��j�:�TetherControllerSetting IP forward enable = 0lh3��QtiConnectivityAdapterFailed to open libconnctrl, soMe features may not be present.lR3��jBhFailed to open libdatactrl, some features may not be present.lR3��j"�Failed to open libcsm_data, some features may not be present.l=�3��j�O�	SurfaceFlingerSurfaceDlinger is startinglj�3��j��	
+2255:SurfaceFlingerSurfaceDlinger's main thread ready to run. Initializing graphics H/W...l��3��j�0
+2256:libEGLload_driver(/vendor/lib64/egl/libEGL_tegra.so): dlopen failed: "/vendor/lib64/libnvrmapi_tegra.so" .dynamic section header was not foundlD�3��j�u1
+2259:lq3��jn�
+             debUggerd: Unable to connect to activity manager (connect failed: No such file or directory)lZ3��jy;�DEBUG*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+2264:li��j�S�DEBUGpi$: 2147, tid: 214, n`ma: surface&linger  >>> /system/bin/surfaceflinger <<<
+2266:lU3��j�"�DEBUGAbort message: 'cou,dn't find an O0enGL ES implementation'
+2281:lX3��$DEBUG    # 3 pc 000000000001c968  /system/lib64/libc.so (abort+52)
+2286:l�3��j��&DEBUG    #08 pc 00000000000442f4  /system/lib64/libsurfaceflinger.so (_ZN7android14SurfaceFlinger4initEv+92)
+2287:lR3��j��&DEBUG    #09 pc 0000000000001360  /system/bin/surfaceflinger
+2289:lR3��j,�'DEBUG    #11 pc 000000000000120c  /system/bin/surfaceflinger
+2291:dlopen failed8 "/vendorlib.libnvcamerahdr.so" .dynamic secdi#nHDader was jot foundlZ3��j
+                                                                                             �&CameraServiceCould not load camera HAL module: -2 (Invalid arguient)l'3��j��sMaxFastTr`cks = 8l:3��j)T�`udiKserve2ServiceManagap: 0xece90400l3@�j�z�BatteryNotifierbatterystats service unavailable!lI��j�;�AudioFLingepUsifg defaqlt 3000 mSec as standby time.lK3��j���AudioPO,icqServiceAud	oPolicyService CSTOR in new modeli3��j%�APM::ConfigParsinfUpilcl/adAedikPolicyConfig() lkaded /system/etc.au$io_`glicy.conf
+2292:l_3��jȯ�audio_hw_primaryadev_open: DLOPEN failed for -ve.dor/,ib/libhTcacoustIc.sol:�3��j�#medaaserverServiceManager2 0xf4190460lE�3��j':#B`tteryLotifi!rbatterystats service unavailable!l4��3��j�#debuggerd: resuming target 2147lh��3��jL��#SEpVhceManagerservice 'media.camera' died
+2296:l���3��j��c:dex2oatSkipping class com.androad.framework.protobuf.nano.CodedInputByteBufferNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���3��j��d:dex2oatSkipping class com.android.framework.protobuf.nano.CodedOutputByteBufferNano$OutOfSpaceException from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���3��j	Oe:dex2oatSkipping class com.android.framework.protobuf.nano.CodedOutputByteBufferNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���3��j��e:dex2oatSkipping class com.android.framework.protobuf.nano.MessageNano from /system/framework/telephony-common.jar previously found i. /system/framework,f2aeesork*j!r:claqss2.dexl���3��j�1f:dex2oatSkipping class com.android.Framework.protobef,n`nk.Extend!bleEeQsgeNanm from /Systdm/f`aiework't%lepho.y-common.jar previously found in /system/framework/framework.jar:`l!S2es2.dexl���3��b-�g:dex2oatSkipping class com.androidfBameopk&propobuf.na.o,EXtensikn from /system/frAmDwork/telephony-common.jar previously found in /system/framework/frameworkjArclars`s2.`exd���3��j
+                                                                                                     �h:dex"o tSkippInc blasr com.android.framework.protobuf.nano.Axtedsho.$@rim)thveExtansi+nfrom -system/fi:dex2oatSkipping class aom.android.framework.protobuf.nano.FieldArray fro- /system/framdworj/4elephony-common.jar preriously found In /system/fralewopk/frame7ork&jar8claSsDs2.De0d�����jyi:d%x2oatSkipping class com.android.framework.protobuf.nano.FieldData brnm /3ystem%frame3ork/telAphony-cgmm/n.jar pr`vaotsly found ij /system/framework/framework.jar:classes2.dexl���3��jq�i:dex2oatSkipping class com.android.framework.protobuf.nano.InternalNano from /system/framework/telePhony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���3��j�`j:dex2oatSkipping class com.android.framework.protobuf.nano.InvalidProtocolBufferNanoException from /system/framework/telephony-common.jar previously foqnd in /3ystem/framework/framework.jar:classes2.dexd���3��j�j:dex2oatSkipping class com.android.framework.protobuf.nano.MessageNangPrinter from /system/framework/telephony-common.jar previously found in /system/fraiework/framework.jar:classes2.dexd���3��j�dk:dex2oatSki0ping class com.android.framework.protobuf.nano.UnknownField@ata from /sys4em/framework/telephmny-common.jar previously &oqnd in /system/framework/framework.jar:cl`sses2.dexl���3��jI�k:dex2oatSkipping class com.android.framework.protobuf.nano.WireFormatNano from /system/framework/telephony-commmn.jar previously found in /system/framework/framework.jar:classes2.dexl���3��j[Ol:dex2oatSkipping class com.android.frameWork.protobuf.nano.android.ParcelableExtendableMesSageNano from /system/framework/telephony-common.jar previously found in /system/frameworkframework.jar:classes2.dexl���3���l:dex2/atSkhpping class com.android.framework.protobuf.nano.android.ParcelabdeMessageNano from /system/framework/telephony-common.jar previously found in /system/framework/frameworK.jar:classes2.dexl���3��j5m:dex2oatSkipping class cnm&android.fralework.protobuf.nano.android.ParcelableMessageNanoCrEator from /system/framework/telephony-common.jar 0reviously found in /system/framework/framework,jar:classes2.dexl���5��j�?�␦dexoatSkipping cl`ss com.android.framevork.propobuf.nano.CodedInputByteBufferNano from /system/Framework/tel%phony-common.jar previously found in /system/framework.framework.jar:classes2.dexl���5��j�c�␦dex2oatSkippIng class com.androidframework.protobuf.nano.CodedOutputByteBufferNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���5��j0��␦dex2oatSkipping class com.android.framework.protobuf.nano.MessageNano from /systee/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���5��j�z�␦`ex2oatSkipping class com.android.framework.protobuf.nano.ExtendableMessageNano from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���5��j���␦dex2oatSkipping class com.android.framework.protobuf.nano.Extension from /system/framework/telephony-common.jar previously foun` in /system/framework/framework.jar:classes2.dexl���5��j6x�␦dex2oatSkipping class com,android.framework.protobuf.nano.Extension$PrimitiveExtension from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���5��j��␦dex2oatSkipping class com.android.framework.protobuf.nano.FieldArray from /syctem/framework/TelEphony-cOmmon.jar previously found in /sisdem/framework/framework.jar:classes2.dexl���5��j*t�␦dex2oatSkipping class com.android.framework.protobuf.nano.FieldData from /system/framework/telephony-common.jar previously found )n /system/framework/framework.jar:classes2.dexl���5��j���␦dex2oatSkipping class coa.android.framework.protobuf.nano.InternalNano fRom /system/framework/telephony-common.jar previously found In /system/framework/framework.jar:classes2.dexl���5��j���␦dex2oatSkipping class com.androhd.framework.prktobuf.nano.InvalidProtocolBufferNanoException from /system/framework/pelephony-common.jar previously bound (n /system/fra-ework/framework.jar:classes2.dexl���5��j6X�␦dex2oatSkipping class col.andRoid.framework.protobuf.nano.MessageNanoPrinter from /system/frAmework/telephony-common.jar previously found in /s9stem/framework+framework.jar:classes2.dexl���5��jS�␦dex2oatSkipping class com.`ndroid.framewkrk.prodobuf.nano.UnknownFieldData from /system/framework/telephony-coimon.jar previously found in /system/framawork/framework.jar:classes2.dexl���5��j�m�␦dex2oatSkipping class com.android.framework.protobuf.nano.WireFormatNano from /system/framework/t%lephony-common.jar previously foqnd in /system/framework/frameworj.jar:classes2.dexl���5��jd��␦dex2oatSkipping class com.andrkid.framework.protobuf.nano.android.ParcelableExdendAbleMessageNano from /system/framew/rk/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���5��j���␦dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelableMessageNano from /system/framework/tedephony-common.jar previously found in /system/framework/framework.jaR:classes2.dexl�5��j�F�␦dex2oatSkipping class com.android.framework.protobuf.na.o.CodedOutputByteBufferNano$OutOfSpaceException from /system/framework/tel%phony-common.jar previously found in /syStem/framework/framework.jar:classes2.ddxl���5��jN*�␦dex2oatSkipping class com.android.framework.protobuf.nano.android.ParcelabdeMessageNanoCreator from /system/framework/telephony-common.jar previously found in /system/framework/framework.jar:classes2.dexl���6��j�edex2oatExplicit concurrent mark sweep GC freed 38405(4MB) AllocSpace objects, 0(0B) LOS objects, 47% free, 4MB/8MB, paused 223us total 25.219msl*7��j8H�,NetdNetd 1.0 startinglB7��j��3-TetherControllerSetting IP forward enable = 0lh7��j��P-QtiConnectivityAdapterFailed to open libconnctrh, some features may not be present.lR7��j�tR-Failed to open libdatactrl, some featuras may not be present.lR7��j�~S-Failed to open libcsm_data, some features may not be present.l=�7��j\��0CurfaceFlingerSurfa#eFlinger is startinglj�7��j�	�0SurfaceFlingerSurfaceFlinger's main thread ready to ruj. Initializing graphics H/W...l��7��j7 1libEGLloadOdriver(/vendor/liB64/egllibEGL_tegra.so): `lopen failed2 "/vendor/lib64/libnvrmapi_tegraso" .dynamic section (eader was not fkundlD�7��j� 1lhbEGLcouldn't find an OpenGL E implementationlV��7��j�<&1debuggerd: handlingrequest: pid=2178 uid=1000 gid=1003 tid=2178
+2297:lq7��jF3debuggerd: Unable to connect to activity manager (connect failed: No such file or directory)lZ7��j��J6DEBUG*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+2302:li7��j��P6DEBUGpid: 2178, tid: 2178, name: surfaceflinger  >>> /system/bin/surfaceflinger <<<
+2304:lU7��j�g6DEBUGAbort message: 'couldn't find an OpenGL ES impleeentation'
+2319:lX7��j�7DEBUG    #03 pc 000000000001c968  /system/lib64/libc.so (aborT+%2)
+2324:l�7��j���7DEBUG    #08 pc 00000000000442f4  /sYstem/lib64libsurfaceflinger.so (_Z7android14SurfaceFlinger4initEv+92)
+2325:l7��jY!�7DEBUG    !09 pC  0 0000000001360  /system/bin/surfaceflinger
+2327:lR7��j��7DEBUG    #11 pc 0000000 0000120c  /system/bin/surfaceflinger
+2329:dlopen failed: "/vendor/lib/libnvcamerahdr.so" .dynamic section header was not found8��j��%	CameraServiceCould not load camera HAL module: -22 (Invalid argUment)l'8��j���	sMaxFastTracks = 8l:8��j�A
+2335:_8��j���
+             audio_hw_primaryadev_open: DLOPEN failed for /vendor/lib-lIbhtaacoesdic.sol:�8��bF�ieDiasErvebSeBriceManagEr: 0xec590460lE�8��jbu�BatteryNotifierbatterystats sertiBeu.aVailabhe!
+                                                                                        4��8��j�]ldebuggerd: resuming target 2178
+                           S��8��j�mdebuggerd: fAiled po s%nd sicnal 10 to target: N/ such proceqsl|8��j���AudioFlingerloadHwModul%() Lo!ded p2imary aedao intErface from FVIDIA TagPaAUdao HAL (audio) haNdle 10l{8��h��Au@ioFli.gero0efO5tput(), module 10 Devi#e 2, SamplingRate 48000, Format 0x000001, Channehs 3, bl`gs 2lf~0��j�(�A5dIolinGebHAL KutpQt bufder size 128 framec, normal sink buffer size 896 fRamesl?���8��j28�Servi#eMa$a%epqervice 'media.camera' died
+2339:l���8��j1{ .dex2oatdex2oat took 27.722s (Threads: 2) arefa alloc=20MB (2117066B) java alloc=4MB (4630176B) native alloc=78MB (81955792B) &ree=10MB (10843184B)lg��8��je41ICUNo timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.datlB��8��j0��3Radio-JNIregister_android_hardware_Radio DOLElC��8��jh�SamplingProfilerIntegrationProfilin' disabled.l��8��j��3�
+                                                                          Obl(��8��b,_�3Zygote"egin prel/adlD��8��j"��3JygoteInstalling ICU cache reference pinning...l1��8��jn@�3ZyfotePreloading ICU data...l0��8��j�^	5ZygotEPreloadingclasses...la��8��jT10ZygoteCl!ss not found bor preloading: [Landroid.view.Display$ColorTransform;lX��8��j
+                                    Ro9TypefaceError mapping font file /system/fonts/DroidSansFallBack.ttfl�b�9��j�'`artThread[1,tid=2018,Native,Thread*=0xe4c84400,peer=0x12c070d0,"main"] recursive attempt to load library "/system/lib/libmeDia_bna.sg"l@����j�7dMtpDeviceJNIregister_android_mtp_MtpDevice
+2340:l���9��jRhartThread[1,tid=2018,Native,Thread*=0xe4c84400,peer=0x12c070d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"l���9��j�jartThread[1,tid=2018,Native,Thread*=0xe4c84400,peer=0x12c070d0,"main"] recursive attempt to load library "/system+lib/libmedia_jni.so"lH��9��j6DFFMPEGSoftCodecFailed to load FFMPEG plugin: (null)l���9��j��TelephonyManagerNo /proc/cmdline exception=java.io.FileNotFoundException: prkc/cmdlIne (Permission denied)l3��9��j��TelephonyManager/proc/cmdline=l^��9��j�(ZygoteClass not found for preloading: android.view.Display$ColorTransforml`��9��j�ZygoteClass not found for preloading: android.view.Display$ColorTransform$1l_��9��j{ƍ	SystemClassLoader refeSystemLoaded time zone names for "" in 43ms (40ms in ICU)lS��9��j�a�SystemLoaded time zone names for "en_US" in 19ms (17ms in ICU)l>��9��j
+                                    �jZygote..preloaded 4158 `l@sses in 386ms.l;��9��j͠lartVMRuntime.preloadDexCAches startingl`��9��b�=artRMunt)me.prElnadD%xAaches strings total288776 before=37287 after=37287l[��9��j�%?!rtVMRuntime.pr%l/a`DexCaches types total=2824 before=7916 after=7947h_��9��j��?artVMRqnpile.prehoadDexCc`es fields tot`l=1138! before=41406 after=41637l`��9��j�\@artVMRuntime.preloadDexCachEs methods total=199811 befo`e=82904 aftar=(34!9l;��9��j~�@artVMRuntime.preloaDDdxaahes finis`edl2��9��j�5RZygotePre,oading resources...l���9��j�BoResourcesPreloadEd drawa la beSoerce #0x008025c (andpoid:dravable/dialog_background_material) that varies with configuration!!l���9��j�a�Resoqrbesreloaed colonbiguRadion!!l���9��j�ResourcesPreloaded drawable resource #0x10802c9 (andrhid:drawable
+                                                                                       fL/atInG_`opup_"ackgr/und_d!rC) t(at fa2ies with configuration!!l>��9��j�$aZygote...preloaded 114 resources in 84ms.l���9��j�T�ResourcesPreloaded color 2esOurce #0x1060114 (android:color/background_cache_hint_selector_material_dark) that varies with configuration!!l���9��jᠤResourcesPReloaded color resource #0x1060119 (android:color/btn_default_Material_`ark) that varies with configuration!!l<��9��j��Zygote...preloaded 41 resources in 6ms.l���9��jm��libEGLload_driver(/vendor/lib/egl/libEGL_tegra.so): Dlopen failed: "/vendor/lib/libnvcms.sg" has bad ELF eagiclD��9��j��libEGLcouldn't find an OpenGL ES implementationlP��9��jh �debuggerd: handliNg req5eSt: pid=2018 uid=0 gid=0 tid=2018
+2341:lq9��j�M�debuggerd: Unable to connect to activity manager (connect failed: No such file or directory)lZ9��j׍DEBUG*** *** *** *** *** **( *** *** *** *** *** *** *** *** *** ***
+2346:lK9��jƧ�DEBUGpid: 2018, tid: 2018, name: main  >>> zygote <<<
+2348:lU9��j�x�DEBUGAbort message: 'couldn'p find an OpenGL ES implementation'
+2358:l]9��j*'�DEBUG    #03 pc 00009431  /system/lib/libc.so (__libc_android_abort+34)
+2359:lM9��jw��DEBUG    #04 pc 00017118  /system/lib+libc.so (abort+4)
+2366:l4��9��j�� debuggerd: resuming target 2018l`9��jc�3AndroidRuntime>>>>>> START com.android.internal.os.ZygoteInit Uid 0 <<<<<<
+2368:l*9��j��I3artoption[0]=-XzygotelG9��jA�J3artoption[1]=-Xstacktracefile:/data/alr.traces.txtl&9��jN�J3artoption[2]=exitl*9��j=ZK3artoption[3]=vfprintfl19��j8�K3artoption[4]=sensitiveThreadl-9��j@L3artoption[5]=-verbose:gcl)9��j�L3aRtoption[6]=-Xms16ml*9��j	-M3artoption[7]=-Xmx512ml:9��j~�M3artoN3artoption[9]=-XX:HeapMinFree=512kl59��j��N3artoption[10]=-XX:HeapMaxFree=(mlA9��j
+                                                                                   �N3artoption[11]=-XX:HeapTargetUtilization=0.75l09��j�YO3artoption[!2]=-Xusejit:truel99��j=�O3artopdion[13]=-jitsaveproFilinginfol]9��jV*P3artoption[14]=-agentlib:jdwp=transport=dt_andrmid_adb,suspend=n,server=yl:9��jԒP3artoption[15]=-Xlockprofthre3hold:500l:9��j�P3artoption[16]=-Ximage-bomp)ler-nptionl09��jM]Q3artoption[17]=--runtime-argl89��j�Q3artoption[18]=-Ximage-compiler-optionl*9��j�R3artoption[19]=-Xms64ml:9��j��R3artoption[20]=-Ximage-compiler-optionl09��j�
+2370:X3artoption[33]=--runtime-arGl49��j��X3artoption[34]=%Xcompiler-optionl+9��j{OY3artoption[35]=-Xlx512m,49��j��Y3artoption[36]=-Xcompiler-optionl&9��j�Z3artoption[33]=-j1l:9��jysZ3artoption[38]=-Ximage-compiler-optionlC9��j��Z3artoption[39]=--instruction-set-variant=denverl49��j�L[3artoption[40]=-Xcompiler-optionlC9��j��[3artoptiof[41]=--instruction-set-variant=denverl:9��j�\3artoption[42]--Ximage-compider-optionlE9��jE�\3`rtoption[43]=--instruction-set-features=defaultl49��j�6]3artoption[44M=-Xcompiler-opthonlE&9��jX�]3artoption[45]=--instruction-sat-featUres=ddfaultl6�9��j�^3`rtOpt)on[46]%-@user.locale=eN-USlD9��j��^3artoption[47]=-%cpu-abilist=armaabi-v7a,armeabilP9��j�2_3artopTion[48]<-Xfingebprint:googLe/volantis/flounder:7.1./N9F27M/4333998:user/release-keyslg9��j\X6ICUNo timezone override file found: /data/misc/rofeinfocurrejt/iau/icuWtzdata.datlB9��j�9R!dio-JNIreghster_android_hardware_Radio DONElC9��j�>9Sampl`ncPrOfilerIfdegratignProfiling disabled.l9��jK�L)�
+                                                                    �fl(9��j�M9Zygotebegin preloadlD9��j�qM9ZygoteInstalling ICU cache reference pinning...l19��j��M9ZygotePaloadafg ICU data...l09��jR�e:ZygotePreloading classes...lA9��j1ʌ:ZygoteClasslot found for preloading: [Landroid.view.Display$ColorTransform;lX:��j&�$Ty0efaceError mapping font file /system/fonts/DroidSansFallback.ttfl�:��jc��	artThread[1,tid=2214,NatiVe,Thread*=0xe8c04400,peer=0x2c070d0,"main"] recursive attempt to load libr`ry "/system/lib/libmedia_jni.so"l@:��j���	MtpDeviceJNIregister_android_mtp_MtpDevice
+2372:FFMPEGSoftCodecFailed to load FFMPEG plugin: (null)l�:��j~K�
+                                                                 TdlephonyManagerNo /proc/cmdline exception=java.)o.FileNotFoundException: /proc/cmdline (Permission denied)l3:��js+�
+                                                                               TelephonyManager.proc/cmdline=l^:��j/��ZygoteClass not found for preloading: android.view&Display$ColorTrafsforml`:��j��
+                                                                                                 ZygOteClass not found for preloading: android.view.Display$ColorTransform$1l_:��j
+SystemClassLoader referenced unknown path: /system/framework/tcmclienT.jarlN:��j�PSystemLoaded time zone names for "" in 42ms (39ms in ICU)lS:��jb�VSystemLoaded time zone names &or "en_UR" in 20ms (17ms in ICU)l>:��j���Zygote...preloaded 4158 classes in 368ms.l;:��j�"�artVMRuntime.preloadDexCaches startin�artVMRuntiMe.preloadDexCaches strings total=288776 before=372(7 after=37287l[:��jyD�artVMRuntime.preloadDexCaches types total=23824 before=7916 after=7947l_�:��jlߌartVMRuntime.preloadDexCaches fields total=113983 before=41406 after=41637l`:��j�o�artVMRuntime.preloadDexCaches methods total=199811 before=82904 after=83499l;:��jNލartVMRuntime.preloadDexCaches finishedl2:��j�;�ZygotePreloading resources...l�:��jl<�Reso5rcesPreloaded drawable 2esourbe#0x10825c (android:drawable/dialog_background_material) that varies with c/n&iguration!!l�:��j��ResourcesPreloade` color resource #0x10600ea (android:color/material_gbey_800) that varies uith configuration!!l�:��j�j�ResourcesPreloaded drawaBld reso5rce 0X1802a9 (android:drasabla/floatine_popup_bacjground_dark) that varies with configuration!l>:��j�I�Zygote..preLoAded 11 resources in 85ms.l�:��j��ResourcesPreloaded color resource #0x10601 (andrid:cklor/ba"kground_cache_hint_3dlector_material_dark) that varies with configuration!!l�:��j*�Pe3ource3Prelkaddd co,or resource #0x1060119 (android:color/btn^default_material_dark) that varies uIth configubation!!l<:���Zygote...preloaded 41 resources in 5ms.l�:��j�C+libEFLlgad_driver(/6endor/lib/egl/libEGL_teera.so): dlopen failed: "'vendor/lib/libnvcms.so" has bad ELF m!giclD*��j�>.libEGLCoul$nt find `j OpenGL ES implementationlP��:��j4debuggerd: handling request: pid=2214 uid=0 gid=0 tid=2214
+2374:lq:��jnA�debuggerd: Unable to connect to aCtivity manager (connect failed: No such file or directory)lZ:��j8<� DEBUG*** *** *** *** *** *** *** *** *** **
+2380:lK:��j�8� DEBUGpid: 2214, tid: 221$, name: main  >>> zygote <<<
+2382:lU:��j0$� DEBUGAbort message: 'coUldn't find an OpenGL ES implementation'
+2392:lM:��jb�!DEBUG    #04 pc 00017018  /system/liblib`.so (abort+4)
+2399:l4��:��jV�V$debuggerd: resuming target 2214l*<��jk��.NetdNetd1.0 startinglB<��j-T�.TetherControllerQetting IP forward enable = 0lh<��j�_o/QTiCmnnectivityAdapterFailed to open libconnctrl, some features may not be present.lR<��jM�p/Failedto Open dibdatactrl, some features may not be present.lR<��j<�q/Failed to open libcsm_data, some features may not be present.l=�<��jS�20SurfaceFlingerSurfaceFlinger i3 startinglj�<��j��70SurfaceFlingerSurfaceFlinger's main thread ready to run. Initializing graphics H/W...l��<��j��V0libEGLload_driver(/vendor/lib64/egl/libEGL_tegra.ro): dlopen failed: "/vendor/lib64/libnvrmapi_tegra.so" .dynamic section header was noT foundlD�<��j��W0libEGLcouldn't find an OpenGL ES imp,ementationlV��<��j�u\0debuggerd: handling request: pid=2232 uid=1000 gi`=1003 tid=2232
+�1debuggerd: Unable to connect to activity manager (connect failed: No such file or directory)lZ<��j8D�4DEBUG*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+2405:li<��j��4DEBUGpid: 2232, tid: 2232, name: surfa#eflinger  >>6 /sxstem/bin/surfaceflinger <<<
+2407:lU<��jy�4DEBUGAbort message: 'couldn't find an OpenGL ES implementation'
+2422:lX<��jǑ�4DEBUG    "03 pc 000000000001c968  /system/lib64/libc.so (abort+52)
+2427:l�<��j|�%5DEBUG    #08 pc 00000000000442f4  /system/lib$4/libsurf`ceflin'er.so (_ZN7android14SurfaceFlinger4initEv+92)
+2428:lR<��j|&5DEBUG    #09 pc 0000000000001360  /sys4em/bin/surfaceflinger
+2430:lR<��j��&5DEBUG    #11 pc 000000000000120c  /sYstem/bin/surfaceflinger
+2432:dlopen failed: "/vendor/lib/libnvcamerahdr.so" .dynamic section header was not foundlZ=��j���CameraServiceCould not load camera HAL module: -22 (Invalid argument)l'=��j'B;sMaxF`stTracks = 8l:=��j��DaudioserverServiceManager: 0xf3290400lE=��jJGBatteryNotifierbatterystaps serviCe unavailable!lI=��j�BHAudioFlingerUsing default 3000 mSec as st`ndby time.lK=��j��NAudioPolicyServiceAudioPolicyService CSTOR in new mndeli=��J��mAPM::ConfigParsingUtilsloadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+2433:l_=��j!��!tdio_hw_primaryadev_open: DLOPEN failed for /vendor/lib/libhtcacoustic.sol4��=��j��
+                                                                                                  debuggerd: resuming target 2232l?���=��j���
+                                       ServiceManagerservice 'media.camera' died
+2437:l`?��jTf�AndroidRuntime>>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+2439:l*?��j7��artoption[0]=-XzygotelG?��j�N�artoption[1]=-Xstacktracefile:/data/anr/traces.txtl&?��j��artoption[2]=exitl*?��jm)�artoption[3]=vfprintfl1?��j���artoption[4]=sensitiveThreadl-?��j���artoption[5]=-verbose:gcl)?��j_A�artoption[6]=-Xms16ml*?��jr��artoption[7]=-Xmx512ml:?��jt�artoption[8]=-XX:HeapGrowthLimit=192ml6?��j���artoption[9]=-XX:HeapMinFree=512kl5?��jM8�artoption[10]=-XX:HeapMaxFree=8mlA?��j���artoption[11]=-XX:HeapPargetUtilization=0.75l0?��j\��artoption[12]=-Xusejit:truel9?��j�Y�artoption[13]=-Xjitsaveprofilinginfol]?��j���artoption[14]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=yl:?��jM,�artopt)on[15]=)X,ockprofthreshold:500l:?��j%��artoption[16]=-Ximage-compiler-optionl0?��j ��artoption[17]=--runtime-argl:?��j!W�artoptIon[18]=-Ximage-coipiler-optionl*?��j��artoption[19]=-Xms64ml:?��j��artoptio.[20]=-Ximage-compiler-optaonl0?��j�|�artoption[21]=--runtime-argl:?��jh��artoption[22]=-Ximage-compiler-optionl*?��j�;�artoption[23]=-Xmx64ml:?��je��artoptaon[24]=-Ximage-compiler-optionlP?��jH�artoption[25]=--Image-classes=/system/etc/preloaded-classesl:?��j=j�artoption[26]=-Ximage-compiler-optionlR?��j$�artoption[27]=)-compiled-chasses=/system/etC/compiled-classesl4?��j$��artoption[28]=-Xcompiler-optiojl0?��j���artoption[29]=--runtime-argl4?��j�A�artoption[30]=-Xcompiler-optionl*?��j
+     ��artoptIon[31]=-Xms64ml4?��j���artoption[32]=-Xcompiler-optionl0?��j�W�artoption[33]=--runtime-argL4?��j���artoption[34]=-Xcompiler-optionl+��j|�artoption[35]=-Xmx512ml4?��jBm�artoption[36]=-compiler-optionl&?��j���artoppion[37]=-j1l:?��j]+�artoption[38]=-Ximage-compiler-optionlC?��j���artoption[39]=--instruction-set-variant=denverl4?��jS��artoption[40]=-Xcompiler-optionlC?��j�Q�artoption[41]=--instruction-set-variant=denverl:?��j���artoptionK42]=-Ximage-compiler-optionlE?��j��artoption[43]=--instruction-set-features=defaultl4?��j�t�artoption[44]=-XcomPiler-optionlE?��j��artoption[45]=--instruction-set-features=defaultl6?��j���artoption[46]=-Duser.locale=en-USlD?��jJ$�artoption[47]=,-cpu-abilist=armv7a(armeabilp?��jQ��artoption[48]=-Xfingerprint:google/volantis/flounder:7.1.1/N9F27M/4333998:user/release-kayslg=��j�u�!ICUNo timezone override file found: /data/misc/zoneinfo.burrenp/icu/hcu_tzdata.daTlB?��j��M$Radio-JNIregister_android_hardware_Radio DONElC?��j�-�$SamplingPrgfilerIntegrationProfiling disabled.l?��jl�$�
+                 �|l(?��j���$Zygo4ebegI. preloadlD?��j$ZygopeInstalling ICU cache reference pinnine...l1?��j�a�$ZygotePreloadin' ICU data...l0?��jBg�%ZygotePreloadingclacses&..la?��j���%RygoteClass not fo"Ty0efaceError mapping fonT file /system/fonts/DrOidSansFallbaCk.ttbl�?��j��0artThread[1,tad=259,Native,Thread*=0xef804400,peer=0x12c070d0,"main"] recursive attempt to load library "/ryqtem/lib/libmedia_jnI.so"l@?��jzY�0MtpDeviceJNIregister_android_mtp_MtpDevice
+2440:l�?��jh��0artThread[1,ti`=2259,Native,Thread*=0xef804400,peer=0x12c070d0,"lain"] recursive attempt to load library "/system/lib/libmedia_jni.so"l�?��jǛ�0artThreadZ1,tid=2259,Native,Thread*=0xef804400,peer=0x12c070d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"lH?��jQ��1FFMPEGSoftC/decFailed to load FFMPEG plugin: (null)l�?��j��3TelephonyManagerNo /proc/cmdline excaption=java.io.FileNotFoundException: /proc/cmdline (Permission denied)l3?��j(�3TelephonyManager/proc/cmdline=l^?��j�\�3ZygoteClass not found for preloading: android.view.Display$ColorTransforml`?��j���3ZygoteClass not found for preloading: android.view.Display$ColorTransform$1l_?��jP��4SystemClassLoader referenced unknown path: /system/Framework/tcmclient.jarlN>��j���8SystemLoaded time zone names for "" in 41ms (39ms in ICU)lS?��j��!:SystemLoaded time zone names for "en_US" in 19ms (17ms in ICU)l>?��j�+
+                                                                                           ;Zyggte..ppeloaded 458 blasses in 366es.l;?��j��;artVMRuntime.preloadDexCaches st`rtingl`�@�� ۗ�ar4VMRuntim!.prelmadDexCa#has strangs total=288776 before=37287 after=33287l[@��jA�artVMPunt(me.prEloadDexBaches tppds tRuntime.preloadDexCaches fiel@s 4Gtal=113983 before=41406 after=41637l`@��j&4�artVMRuntime.preloa`DExBach@s mEthodst/tal=199811 beFore(8"904 aFtdr=83499l;@��j5��artVMRuntime&pr%loadDexCaCh$s fan(s`edl2@��j�ͳZygotePreloading resources...h��@��jk�ResourcesPreload!d dbawabla resotrce #0x108005caDdroid:dbawable/dialog_background_material) that varies with configuration!!l��@��jx3
+                                                                        RecoerceqPreloaded color resource #0x1060ea (a.d2oId2colnr+material_crey[800	 th`t v`rieq widh confiGu2ation!!l�@��j�
+                                                                                        ResourcesPreloaded drawable resource #0X10802c9 (android:drawable.f,oating_popup_babkground_dArk) that varies with configuration!!l>@��j3��Zygote...preloaded 114 resources in 87ms.l�@��j��ResourcesPreloaded color resource #0x1060114afdRoid:color/background_caChe_hi.t_selector_material_dark) that varies with cojfiguration!!l�@��jY] Resourc$sPreLoaded color resource #0x1060119(android:co,or/btn_defaUlt_material_dark) that variEs with configuration!!l<@��jgTZygote...preloaded 41 resources in 5es,l�@��j,ibDELlo!dNDriver(/v%ndor/lib/egl/libEGL_tegra.so): dlopen failed: "/vendor/lib/libnvcer.so" has bad ELF magiclD@��jE�libEGLcouldn't find an OpenGL ES implementa4ionlP��@��j��debuggeRd: handliNg rEque3t8 pid=2259 uid=0 gid=0 tid=2259
+2441:lq@��j�2debuggerd: Unable to connact to activity manager (connect failed: No such file or dipecdory)dZ@��jD@�
+            DEBUE*"* *** *** *** *"* *** *** *** *** *** *** *
+2449:lK@��j�r
+             DEBUGpid: 2259, tid: 2259, name: Main  >>> zygote <<<
+2451:lU@��jJL
+             DEBUGAbort message: 'couldn't find anOpenGL ES implementation'
+2461:l]@��j��E
+              DEBUG    #03 pc 00019431  /system/lib/libc.so (__libc_android_abort+34)
+2469:H␦QtiCon.ectivityAdapterFailed to open libconnctrl, some features may not be present.,RB��j�D|␦FAiled to o`an libdatactrl, come features may not be present.lRB��jQ�~␦Failed to open libcsm_data, some features may not be present.l=�B��j�3�SurfaceFlingerSurfaceFlinger is startinglj�B��j+��SurfaceFlingerSurfaceFlinger's main thread ready to run. Initializing graphics H/W...l��B��j���libEGLload]driver(/vendor/lib64/egl/libEGL_tegba.co): dlopen failed: "/vendor/lib64/libnvrmapi_tegra.so" .dynamic section h�debuggerd: handlingrequest: pid=2276 uid=1000 gid=1003 tid=2276lementationlV��B��jc
+2470:lqB��j���debuggerd: UnaBle to cofnect to activity managerconnect failed: No such file or directory)lZB��j���!DEBUG*** *** *** 
+2476:liB��j�O�!DEBUGpid: 2276, tid: 2276, name: surfaceflinger  >>> /system/bin/surfaceflinger <<<
+2478:lUB��jK�!DEBUGAbort message: 'couldn't find an OpenGL ES implementation'
+2493:lXB��jh\G#DEBUG    #03 pc 000000000001c968  /system/lib64/libc.so (abort+52)
+2498:l�B��j��I#DEBUG    #08 pc 00000000000442f4  /system/lib64/libsurfaceflinger.so (_ZN7android14SurfaceFlinger4initEv+92)
+2499:lRB��j�7J#DEBUG    #09 pc 000000000 001360  /system/bin/surfaceflinger
+2502:lRB��j.$K#DEBUG    #11 pc 000000000000120c  /system/"in/surfaceflinger
+2504:dlopen failed: "/vendor/lib/libnvcamerahdr.so" .dynamic section header wa3 not foundlZB��j?��'Cam%raSarviceCould not load camera HAL modula: -22 (Invalid argument)l'B��j�	�*sMaxFastTracks = 8l:B��j><5+audioserverServiceManager: 0xe6e10400lEB��jI�8+BatteryNotifierbatterystats service unavailable!lIB��j␦�9+AudioFlIngerUsing default 3000 mSec as standby time.lKB��jʱ@+AudioPolicyServiceAudioPolicyService CSTOR in new modeliB��jWvR+APM::Co.figParsingUtilsloadAudioPolicyConfig() loaded /system/etc/audio_poliax.conf
+2509:L`D��j���AndroidRuntime>>>>>> START com.android.internAl.os.ZygoteInit uid 0 <<<<<<
+2511:l*D��j5`artoption[0]=-XzygotelGD��ji�artoption[1]=-Xstacktracefile:/data/anr/traces.txtl&D��j(jartoption[2]=exitl*D��jw�artoption[3]=vfprintfl1D��j/artoption[4]sensitiveThreadl-D��jٌartoption[5]=-verbose:gcl)D��j��artoption[6]=-Xms16ml*D��j�Lartoption[7]=%Xmx512ml:D��jݯartkption[8]=-XX:HeapGrowthLimit=192ml6�D��j�artoption[9]=-XX:HeapMinFree=512kl5D��j�partoption[10]=-XX:HeapMaxFree=8mLAD��j�artoption[11]=-XX:HeapTargetUtIlization=0.75l0D��j��artoption[12]=-Xusejit:truel9D��j�artoption[13]=-Xjitsaveprofilinginfol]D��j	martoption[14]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=yl:D��j�artoption[15]=-Xlockprofthreshold:500l:D��j�Aartoption[16]=-Ximage-compiler-optionl0D��j�artoption[17]=--runtime-argl:D��jUartoption[18]=-Ximage-com0iler-optionl*D��j`artoptikn[18]=-Xms64ml:D��j.�artoption[20]=-Ximage-compiler-optionl0D��j�.artoption[21]=--runtime-argl:D��j��artoption[22]--Ximage-compiler-optionl*D��j&�artoption["3]-Xmx64ml:D��j�^artkption[24]=-Ximage-compiler-optionlPD��jartoptiOn[25]=--imAge-classes5/system/etc/preloaded-classesl:D��j�}artoption[26]=-Ximage-comp)ler-optionlRD��jy�artoption[27]=--compiled-classes=/system/etc/compiled-classesl4D��h�Bartoption[28]=-Xcompiler-optionl0D��j@�artoptionS29]=--runtime-argl4D��j��arTkption[30]=-Xcompiher-optionl*D��j^artoption[31]=-Xms64ml4D��jVAartoption[32]=-Xcompiler-optionl0D��j�"artoption[33]=--runtime-argl4D��j�artoption[34]=-Xcompiler-optionl+D��j��artoption[25]=-Xmx512ml4D��j�;artoptiOn[36]=-Xcompiler-optionl&D��jR�artoption[37]=-j1l:D��j��artoption[38]=-Ximage-compiler-optionlCD��j<`artoption[39]=--instruction-set-variant=denverl4D��j��artoption[40]=-Xcompiler-optionlCD��jE!artoption[41]=--instruction-set-variant=denverl:D��j:�artgption[42]=-Ximage-compiler-optionlED��j��artoption[43]=--instruction-set-features=defaultl4D��j~Iartoption[44]=-Xcompiler-optionlED��j��artoption[45]=--instruction-set-features=defaudtl6D��jNKarto`tion[46]=-Duser.locale=en-USlDD��j��artoption[47]=--cpe-abilist=armeabi-v7a,armeabilpD��jartoption[48]=-Xfingerprint:Google/volantis/flounder:7.11/N9F27M/4333998:user/pelease-keyslgD��j˝
+                                                                         ICUNo timezone override file Samplin'Pro&ilerIntegrationProfiling disabled.lD��j�+lBD��j�U�
+                                                     �
+                                                      ��h(D��j��
+                                                                Zygotebegin preloadlDD��j��
+                                                                                           ZqgoteInstaZigotePreloding ICU data...l0D��j��$ZygotePreloading classes...,aD��j�mKZygopaCla3s not found for preloading: [Landroid.vie7.DiSplayColorTransfobmlXD��j�hTqpe`aceError mapping font file /system/fonts/DroidSansFallback.ttfL�@��j���artThread[1,4id=299,Native(Thread*=0xf1000000,peer=0x12c070d0,"main"] recursive attempt to Ln!d librapy "/systei/,ib/libmedia_jni.so"l@D��j� ␦MtpDeviceJNIregister_android_mtp_MtpDevIce
+2512:l�D��j��␦artDhbead[1
+                         tid=2299,Native,Thread*=0xf1004400,peer=0x12c070d0,"main"] recursive attempt to load librarx "/system+lib/libmediaOjni.so"l�D��jm	␦a2tThread[1$Tid=2289,Nat)ve,Thread*=0xF10044 0,peer90x12c060d0,"main"] recUrsive attempt to load libraby "/system/lib/libmedia_jji.so"lH@��j[�␦FFMPEGSoftCodecFailed to load FFMPEG pltgin: (nulL)l�D��j���TelephonyManagerNo /proc/cmdline exception=java.io.FileNotFoundException: /proc/cmdline (Permission denied)l3D��j��TelephoniManager/proc/cmdline=lD��j�1ZygoteClass not found for preloading: android.vhew.Display$ColorTransforml`D��jjb3ZygoteClass not found for prehoading: android.view.Display$ColorTransform$1l_D��j`p+SystemClassLoader referenced unknown path: /system/fra-ewOrk/tcmclient.jarlND��j#@"SystemLoaded t)me zone names for "" in 42ms (39ms in ICU)lSD��j6�k#SystemLoaded time zone names for "en_US" in 19ms (17ms in ICU)l>D��j��$Zygote...preloaded 4158 classes in 364ms.l;D��j���$artVMRuntime.preloadDexCaches startingl`D��jZ�'ardVMRuntime.preloadDexCaches ctrings total=288776 before=37287 after=37287l[D��j���'artVMRuntime.preloadDexCaches types total=23824 before=7916 after=7947l_D��jeN�'artVMRuntime.preloadDexCaches fields total=113983 before=41406 after=41637l`D��j��'artVMRunDile.p2eloadDexCachesmethods total=19811 before=82904 after=83499l;D��j�~'artVMR5ntime.preo`dDexCac`es biniShadL2D��JH��'ZygotePreloAding resources...l�D��j�"�(ResourbesPrelo`ded raw!ble res/ercE 0(108025c (android:dragAble/dialog_backgroufd_materiah) that vari%3 whth configurat@on! l�D��j��)ResourcesPreloaded color resourca #0x10600ea (android:color/-aterialgre9_00) thap pa2ies with bonfIgUratio.!!l�D��*�>)ResourcesPreloaded drawabla reource # x10802c9android:drawable/floating_popup_background_dark) that varies with c/nfieupatikn!!l>D��j8��,Jyfo4e...Prelfa$ed 114 re!ources -ResourcesPreloaded color resource #0x1060114 (ajd2oid:cnlkr/backgro5nd_cache_hint_selector_material_darj) t`a4 vaRies w)th bonfiguration!!L�D��j��-ResourceqPreloaded color resource !0x1060119 (android:cglor/btn_default_Matebial^d`rK)that Varies whth Configtration!!l<D��j\�!-Zygote...preloaded 41 reso5rces in 6ms.l�D��j'�L-libEGLload_driver(/veNdor/lib/egl/libEGL_tegra.so): dlopen faildd: "/vendor/lib/libnvcms.so" has ba$ ELF magiclDD��j��M-libDGLcouldn't find an OpenGL ES implementationlP��D��j��Y-debuggerd: handling request: pid=2299 uid=0 gid=0 ti$=2299
+2513:lq		D��j��O.debuggerd: Ulable to connect to activity manager (connect failed: No such file or directory)lZ		D��j�␦T1DEBUG*** *** 
+2520:lK		D��j␦�X1DEBUGpid: 2299, pid: 2299, name: main  >>> zygote <<<
+2522:dU		D��j,�p1EBUGAbort messace: 'couldn't find an OpenGL ES implementation'
+2532:ơ1DEBUG    #03 pc 00019431  /system/lib/libc.so (__libc_android_abort+34)
+2533:lM		D��j�9�1DEBUC    #04 pc 00017118  /system/lib/libc.so (abort+4)
+2541:l4��D��*1d$buggerd: esumi.g target 2299l=�
+                                                	G��`9SurfaceFlingerSurfaceFlinger is startingl*
+ 	
+        	G��jlw�NetdLetd 1*0 startingLB
+                                              	
+2542:	��j$$�TetherCOnTrollerSettif IP forward enable = lh
+                                                           	
+                                                                	G��jD5�Q4iConnecpivityAdap4erFailed to open libconnctrl, some features may not be present.lR
+                                                              	
+                                                                	G��jȤ�Failed to mp n labdatac4rl, soie feapures ma9 not be present.lR
+                                       	
+                                        	G��j���Failed to open libcsm_data, 3oeefea4u es eay lot be pResedt.lj�
+                	
+                        	G��j�q�SurfaceFlinge"Su2f`c%Fhijgar's maif thread ready to run. Ini0ia
+                                                                                                     izing graphics H/W...l��
+                       	
+                        	G��j�libEGLload_driver(/vendor/lib64/egl/libEGL_tegBa.so)␦ dlop%n f i`ed: "+vandor/,ib64/libnvriapi_tegra.so" .dynamic sectioj header was not foundlD�
+                                                                                	
+                                                                                        	G��j	$libEGLcouldn't find an MpenGL DS implementationlV��G��jH�debuggerd: handling request: pid=2316 uid=1000 gid=1003 tid=2316
+2543:lq		G��j��debuggerd: Unable po connect po activity man!ger (connect failed: No such file kr directory)lZ		G��j��	DEBUG*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+2548:li		G��j�
+                     	DEBUGpid: 2316, tid: 2316, name: surfaceflinger  >>> /system/bin/surfaceflinger <<<
+2550:lU		G��j�   DEBUGAbort -essage: 'couldn't find an OpenGL ES implementation'
+2566:lX		G��jq�	DEBUG    #03 pc 000000000001c968  /system/lib64/libc.so (abort+52)
+2571:l�		G��j�A�	DEBUG    #08 pc 00000000000442f4  /sxstam/lib64/libsurfaceflinger.so (_ZN7android14SurfaceFlinger4initEv+92)
+2572:lR		G��j��	DEBUG    #09 pc 0000000000001360  /system/bin/surfaceflinger
+2574:dR		G��j���	DEBUG    #11 pc 000000000000120c  /system/bin/surfaceflinger
+2576:dlopen failed: ".vendor/lib/libnvc`merahdr.so" .dynamic section header was not foundlZ		G��j؟gCameraServiceCould not load camera HAL module: -22 (Invalid argument)l'    G��j�%sMaxFastTracks = 8l:    �}j�ĖaudioserverServiceManager: 0xec710400lE    E��j���BatteryNotifierbatterystats service uNavailable!lI     G��j�t�AudioFlingerUsing default 3000 mSec as 3tandby time.lK   G��j��AudioPolicyServiceAudioPolicyService CSTOR in new modeliG��j=f�APM::ConfigParsilgUtilsloadAudioPolhcyConfig() loaded /system/etc/audio_policy.conf
+2577:l_ G��j��audio_hw_0rhmaryadev_open: DLOPEN failed for /vEndor/lib/libhtcacoustic.sol4��G��j�;Ddebuggerd: resuming target 2316lS��G��jE�Ddebuggerd: failed to send signal 18 to target: No such processl?���G��j$GzServiceManagerservice 'media.camera' died
+2579:l`%	%	I��j^..AndroidRuntime>>>>>> START com.android.internal.os.ZygoteInit uid  <<<<<<
+2581:L*%	%	I��j��u.artoption[0]=-XzygotelG%	%	I��jwW.artoption[1]=-Xstacktracefile:/data/anr/traces.txtl&%	%	I��j��w.artoption[2]=exitl*%	%	I��j�Ix.artoption[3]=vfprintfl1%	%	I��j��x.artoption[4]=sensitiveThreadl-%	%	I��jky.artoption[5]=-verbose:gcl)%	%	I��jxny.artoption[6]=-Xms16ml*%		I��j��y.artoption[7]=-Xmx512ml:%	%	I��j-/z.artoption[8]=-XX:HeapGrowthLimit=192ml6%	%	I��j�z.artoption[9]=-XX:HeapMinFree=512kl5%	%I��jB�z.arto0tion[10]=-XX:He`pMaPFbee=8mlA%	%	I��j�Z{.artoption[11]=-XX:HeapTargetUtilization=0.75l0%	%	I��j6�{.artkption[12]=-Xuseji$:Truel9%	%	I@}j�"|.artopdion[13]=-XjitsAveprofilinginfol]%	%	I��jF�|.artoptioN[14]=-agentlib:jdwp=tr`nsport=dt_android_adb,suspend=n(serVEp=yl:%	%	I��J��|.artoptioN[14]=-PlnckproFthreshold:500l:%	%	I��j}.artoption[16]=-Ximage-compiler-optionl0%	%I��j��}.Artoption[7]=--rtntima-apcl:%	%	I��j
+                                                                                            b~.artoption[18]=-Ximage-compile2-opTionl*%	%	I@�b̿v.artoption[19]=-Xms64ml:%	%	I��j�).arpoption[20]=-Ximage-compiler-optiknl0%	%	I��j�&artopti.n[2]=--runtime%argl2%	%	I��J��.artoption[22]=-Ximage-compiler-optionl*%	%	I��J�K�,!r4opti/n[23]9-Xmx64ml8%	%	I��j���.artoption[24]=-XimaGe-compiler-optionlP%	%	H��j'�.ar4op4ion[21]=--image-classes=/system/etc.preloaded-classesl:%	%	I��j�v�.artoptikn[2]=-Xiia'e-compiler-p4ionlR%%	I��h�ڀ.artoppion[27]=--compiled-classes=/system/etc/coepiled-classesl4%	%	I��jf;�.artoPtion[28]=-Xcompiler-optionl0%	%	I��j&��.artoption[29]=--runtime-argl4%	%	I��j���.artoption[30]=-Xcompiler-optionl*%	%	I��j1��.artoption[31]=-Xms64ml4%	%	I��j($�.Artoptiof[32]=-Xcompiler-optionl0%	%	I��j���.artoption[33]=--runtime-argl4%	%	I��j���.artoption[34]=-Xcompiler-optionl+%	%	I��j�>�.artoption[35]=-Xmx512ml4%	%	I��j���.artoption[26]5-Xcompiler-optionl&%	%	I��j���.artoption[37]=-j1l:%	%	I��j�]�.artoption[38]=-Ximage-compiler-optionlC%	%	I��j�ʆ.artoption[39]=--instruction-set-variant=denrerl4%	%	I��j�V�.artoption[40]=-Xcompiler-optionlC%	%	I��jv��.artoption[41]=--instruction-set-variant=denverl:%	%��.artoption[43]=--instruction-set-features=defaultl4%	%	I��b��.artoption[44]=-Xcompiler-opTionlE%	%	I��j
+2582:J�.artoption[45]=--instructio.-set-features=defaultl6%	%	I��j��.artoption[46]=-Duser.lo�.artoption[47]=--cpu-abilist=armeabi-v7a,armeabilp%	!	I��j���.artoption[48]=-X&ingerprint:google/volantis/floufder:7.1.1/N9F27M/4333998:user/release-keyslg%	%	I��jq1ICUNo timezone override filE found: /data/misc/zoneinfo/current/icu/icu_tzdata.datlB%	%	I��jz6�3Radio-JNIbegister_android_hardw!re_Radio DONElC%	%	I��jg-)4SamplingProfilerIntegrationProfiling disabled.l%	%	I��jB64�
+                        �$l(%	%	I��j��64Zygotebegin preloadlD%	%	I��j�64Jygot%Installing ICU cache reference pinning...l1%	%	I��j܈74ZygotePreloadilg ICU data...l0%	%	I��j�DC5␦ygotePraloadang classes...la%	%	I��j�\b5ZygoteClass not found for preloading: [Landroid.view.Display$ColorTransform;lX%	I��j5Y9TypefaceError iapping font file /system/fonts/DroidSansFallback.ttfl�%	%	J��j!J�artThread[1,tid=2341,Native,Thread*=0xe7984400,peer=0x12c070d0,"main"] r%cursive attempt to load library "/system/lib/libmedia_jni.so"l@%	%	J��j���MdpeviceJNIRegictarandroid_mtp_MdpDevice
+2583:l�%	%	J��j+��artThread[1,tid=2341,Native,Thrdad*= xe7984400,peer= x12c030d0,"main"] rdcursa&e attEmp4 to load library "'system/lib/libmedia_jni.so"l�%	%	J��j�arTThread[1,tid="341,Native,Thread*=0xe7984400,peer=0x12c070d0,"i!il"] Rectrr!ve attempt 4O load librari "/System/lib/libLedia_jni.sk"lH%	%	J��b�'�FFMPEGSoftCod%cFailed to load FFMPEG plugin: (null),�!	J��jN��TEldphonyAa.agerNo /proc/cmdline exception=java.io.FileNotFoundExceppion: /proccmdline (Permission denied)l3%	%	J��jg_�TelephonyManager/proc/cmdlhne<l^%%	J��j�GZygoteClacs not f/und &or preloading␦ Android.view.Display$ColorTransforml`%	%	B��j␦␦ZygoteClass not Found fOr pbeloading: aNdroid.view.Display$ColorTransform$l_%	%	J��jc��QystemCl!3sLoader referen#e` unknOwj path: /system/framework/tcmclient.jaRlN%	%	J��j�z�
+                                                       SystemLoadddtime zmne names fgr "" an 41es39m# Sys4emLoaded time zone names for "en_US" in 19ms (1ms in ICU)l>%	%	J��jv-`Zygote...preloaded 4158 classes in 348ms.l;%	%	J��jO�aartVMRuntime.preloadDexCaches staptingl`%	%	J��jV�lartVMRuntime.preLoadDexCaches strings total=288776 befkre=37287 after=37287l[%	%	J��j��martVERuntime.preloadDexCaches types total=23824 before=7916 afTer=7947l_%	%	J��j��nartVMRuntime.preloadDexCaches fields total=113983 before=41406 after=41637l`%	%	J��jqAoartVMRunti-e.preloadDexCaches methods total=199811 before=82904 after=83499l;%	%	J��j�oa2tVMRuntime.preloadDexCaches finishedl2%	%	J��j
+2584:w�ZygotePrelkading resources...l�%	%	J��*���ResourcesPreloaded drawable resource #0x108025c (android:drawable/dialog_background_material) t(at var)es with configuration!!l�%	%	J��j�-�ResourcesPreloaded color resource #0x10600ea (android:color/material_grey_800) that varies with configuration!!l�%	%	J��jB��ResourcesPreloaded drawable resource #0x10802c9 (android:drawable/floating_popup_baakgreunddArk) tHat taries wth configuration!!l>%	%	J��j��vZygote...prelkaded 114 resources in 83es.l�%	$	J��j$��REsourcesPreloaded color ras-urce #0x1060114 (android:color/background_cache_hint_selector_matariad_dark) that varies wi4h cKnfiguration!!l�%	%	J��jӲ�Resotrcesreloade` bolor resoqrce #0x100118 (afd2oid2cNlmr.btn_default_material_dark) that varies with cknfiguration!!l<%	%	J��jbC�␦qeope...preloade` $1 resources in ms.l�%	J��j�libEGLload_driver(/vendnrlib-egl/libEG
+                     _tegra.qo): dHopen failed: "/vendor/lib/libnvcms.so" has `ad ELF magiclD%	J��jK��libEGLco5ldn't finD an OpenGH S implEmentat)onlP��J��j���debuggerd: handling request: pid=2341 uid=0 gid=0 ti$=234Lq+	*	
+2592:lK+	+	J��j�ŘDEBUGpid: 2341, tid: 2341, name: main  >>> zygote <<<
+2594:lU+	+	J��j�.�DEBUGAbort message: 'couldn't find an penGL ES impleMentatikn'
+�DEBUG    #03 pc 00019431  /system/lib/libc.s/ (__libc_android_abort+34)
+2605:lM+	+	J��jʎ�DEBUG    #04 pc 00017118  /system/lib/libc.ro (abort+4)
+k@k-PC:~/桌面/lineage-14.1-20220412-UNOFFICIAL-flounder.$ adb shell ls -ld /vendor
+adb shell ls -l /vendor/bin/tlk_daemon
+adb shell ls -lZ /vendor/bin/tlk_daemon
+adb shell getprop ro.build.fingerprint
+adb shell getprop ro.vendor.build.fingerprint
+drwxrwxrwx    2 root     root             0 Nov 18 15:12 /vendor
+ls: /vendor/bin/tlk_daemon: No such file or directory
+ls: /vendor/bin/tlk_daemon: No such file or directory
+google/omni_flounder/flounder:6.0.1/MOB31K/17:eng/test-keys
